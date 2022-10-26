@@ -145,7 +145,7 @@
                 <div class="u-container-layout u-container-layout-3">
                     <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-3"
                         src="images/icons8-crew-64.png" alt="" data-image-width="64" data-image-height="64">
-                    <h3 class="u-text u-text-default u-text-3">CREW</h3>
+                    <h3 class="u-text u-text-default u-text-3">CREW3</h3>
                 </div>
             </div>
         </div>
