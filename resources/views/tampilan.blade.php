@@ -94,7 +94,7 @@
                                     data-animation-direction="Up" data-animation-delay="500"> EO Satria mediautama
                                     Adalah Penggarap Acara yang berkomitmen akan melayani sepenuh hati dan akan membuat
                                     semua acara yang kami pegang berjalan dengan lancar</p>
-                                <a href=""
+                                <a href="https://nicepage.com/website-design"
                                     class="u-active-black u-border-none u-btn u-button-style u-custom u-custom-color-3 u-hover-black u-text-active-white u-text-hover-white u-text-white u-btn-1"
                                     data-animation-name="fadeIn" data-animation-duration="1500"
                                     data-animation-direction="Up">hubungi</a>
@@ -118,7 +118,7 @@
             <div class="u-list u-list-1">
                 <div class="u-repeater u-repeater-1">
                     <div class="u-align-center u-container-style u-custom-color-1 u-list-item u-repeater-item"
-                        data-animation-name="" data-animation-duration="0" data-animation-delay="0"
+                        data-animation-name="bounceIn" data-animation-duration="1000" data-animation-delay="0"
                         data-animation-direction="">
                         <div class="u-container-layout u-similar-container u-container-layout-1">
                             <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
@@ -130,8 +130,8 @@
                     </div>
                 </div>
             </div>
-            <div class="u-container-style u-group u-palette-1-base u-shape-rectangle u-group-1" data-animation-name=""
-                data-animation-duration="0" data-animation-direction="">
+            <div class="u-container-style u-group u-palette-1-base u-shape-rectangle u-group-1"
+                data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="">
                 <div class="u-container-layout u-container-layout-2">
                     <img class="u-image u-image-default u-preserve-proportions u-image-2"
                         src="images/icons8-purchase-order-16.png" alt="" data-image-width="16"
@@ -140,7 +140,8 @@
                         data-animation-duration="1000" data-animation-direction="">ORDER</h3>
                 </div>
             </div>
-            <div class="u-container-style u-custom-color-1 u-group u-shape-rectangle u-group-2">
+            <div class="u-container-style u-custom-color-1 u-group u-shape-rectangle u-group-2"
+                data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="">
                 <div class="u-container-layout u-container-layout-3">
                     <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-3"
                         src="images/icons8-crew-64.png" alt="" data-image-width="64" data-image-height="64">
@@ -160,24 +161,18 @@
                             <div
                                 class="u-align-left u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
                                 <div class="u-container-layout u-container-layout-1">
-                                    <video>
-                                        <source src="VIDEO.MP4" type="video/webm">
-                                    </video>
-
+                                    <img class="u-expanded-width u-image u-image-1" src="images/image.png"
+                                        data-image-width="317" data-image-height="245" data-animation-name="fadeIn"
+                                        data-animation-duration="2000" data-animation-direction="Left">
                                     <h2 class="u-text u-text-1" data-animation-name="fadeIn"
-                                        data-animation-duration="1750" data-animation-direction="Left"> UP COMING
-                                    </h2>
-                                    <p class="u-large-text u-text u-text-variant u-text-2"> Duis aute irure dolor in
-                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                        deserunt mollit anim id est laborum. </p>
-                                    <p class="u-text u-text-default u-text-3"> <a
-                                            class="u-border-1 u-border-black u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-link u-button-style u-none u-text-body-color u-btn-1">Freepik</a>
-                                    </p>
+                                        data-animation-duration="1750" data-animation-direction="Left">&nbsp;​UP
+                                        COMING</h2>
+                                    <p class="u-large-text u-text u-text-variant u-text-2">Kegiatan CV SATRIA MEDIA
+                                        UTAMA yang akan datang</p>
                                     <a href="https://nicepage.com/static-site-generator"
-                                        class="u-active-black u-border-none u-btn u-button-style u-custom u-hover-black u-palette-2-base u-text-active-white u-text-hover-white u-text-white u-btn-2"
+                                        class="u-active-black u-border-none u-btn u-button-style u-custom u-hover-black u-palette-2-base u-text-active-white u-text-hover-white u-text-white u-btn-1"
                                         data-animation-name="zoomIn" data-animation-duration="1500"
-                                        data-animation-direction="">DETAIL</a>
+                                        data-animation-direction="">read more</a>
                                 </div>
                             </div>
                         </div>
@@ -190,9 +185,8 @@
                                         src="">
                                         <div
                                             class="u-container-layout u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-xl u-valign-top-sm u-valign-top-xs u-container-layout-2">
-                                            <img class="u-expanded-width u-image u-image-2"
-                                                src="images/young-attractive-woman-exercising-gym_1303-22561.jpg"
-                                                data-image-width="626" data-image-height="417"
+                                            <img class="u-expanded-width u-image u-image-2" src="images/event.png"
+                                                data-image-width="852" data-image-height="735"
                                                 data-animation-name="fadeIn" data-animation-duration="2000"
                                                 data-animation-direction="Down">
                                         </div>
@@ -201,9 +195,8 @@
                                         class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-3">
                                         <div
                                             class="u-container-layout u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-xl u-valign-top-sm u-valign-top-xs u-container-layout-3">
-                                            <img class="u-expanded-width u-image u-image-3"
-                                                src="images/strong-man-training-gym_1303-238531.jpg"
-                                                data-image-width="626" data-image-height="417"
+                                            <img class="u-expanded-width u-image u-image-3" src="images/event3.png"
+                                                data-image-width="857" data-image-height="628"
                                                 data-animation-name="fadeIn" data-animation-duration="2000"
                                                 data-animation-direction="Right">
                                         </div>
@@ -216,10 +209,9 @@
                                         src="">
                                         <div class="u-container-layout" src="">
                                             <img class="u-expanded-width-sm u-expanded-width-xs u-image u-image-4"
-                                                src="images/strong-man-training-gym_1303-23478.jpg"
-                                                data-image-width="626" data-image-height="417"
-                                                data-animation-name="fadeIn" data-animation-duration="2000"
-                                                data-animation-direction="Up">
+                                                src="images/event2.png" data-image-width="742"
+                                                data-image-height="557" data-animation-name="fadeIn"
+                                                data-animation-duration="2000" data-animation-direction="Up">
                                         </div>
                                     </div>
                                 </div>
