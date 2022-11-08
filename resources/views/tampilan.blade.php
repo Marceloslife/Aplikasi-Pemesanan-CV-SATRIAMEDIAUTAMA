@@ -16,11 +16,14 @@
     <link id="u-theme-google-font" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|PT+Sans:400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|PT+Sans:400,400i,700,700i">
 
-
-
-
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
 
 
 
@@ -80,18 +83,22 @@
             data-animation-direction="Left">
     </header>
     <section class="u-clearfix u-image u-section-1" id="carousel_4545" data-image-width="1980" data-image-height="1100">
-        <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
+        <div class="u-clearfix u-sheet u-sheet-1">
             <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
                 <div class="u-layout">
                     <div class="u-layout-row">
                         <div class="u-container-style u-layout-cell u-left-cell u-size-28 u-layout-cell-1">
-                            <div class="u-container-layout u-valign-middle u-container-layout-1">
-                                <div class="u-border-9 u-border-custom-color-1 u-line u-line-horizontal u-line-1"></div>
+                            <div class="u-container-layout u-table-valign-top u-container-layout-1">
+                                <div class="u-border-9 u-border-custom-color-1 u-line u-line-horizontal u-line-1">
+                                </div>
+
                                 <h1 class="u-text u-text-custom-color-2 u-text-1" data-animation-name="fadeIn"
-                                    data-animation-duration="2000" data-animation-direction="Left">EO SATRIA MEDIA UTAMA
+                                    data-animation-duration="2000" data-animation-direction="Left">EO SATRIA MEDIA
+                                    UTAMA
                                 </h1>
-                                <p class="u-text u-text-2" data-animation-name="fadeIn" data-animation-duration="1750"
-                                    data-animation-direction="Up" data-animation-delay="500"> EO Satria mediautama
+                                <p class="u-text u-text-2" data-animation-name="fadeIn"
+                                    data-animation-duration="1750" data-animation-direction="Up"
+                                    data-animation-delay="500"> EO Satria mediautama
                                     Adalah Penggarap Acara yang berkomitmen akan melayani sepenuh hati dan akan membuat
                                     semua acara yang kami pegang berjalan dengan lancar</p>
                                 <a href="https://nicepage.com/website-design"
@@ -103,14 +110,80 @@
                         <div
                             class="u-align-center u-container-style u-layout-cell u-right-cell u-size-32 u-layout-cell-2">
                             <div class="u-container-layout u-container-layout-2">
-                                <img class="u-bottom-left-radius-10 u-bottom-right-radius-10 u-image u-image-round u-top-left-radius-10 u-image-1"
+                                {{-- <img class="u-bottom-left-radius-10 u-bottom-right-radius-10 u-image u-image-round u-top-left-radius-10 u-image-1"
                                     alt="" data-image-width="1280" data-image-height="720"
-                                    src="images/WhatsAppImage2022-10-07at14.52.33.jpeg">
+                                    src="images/WhatsAppImage2022-10-07at14.52.33.jpeg"> --}}
+                                {{-- <video
+                                    class="u-bottom-left-radius-10 u-bottom-right-radius-10 u-image u-image-round u-top-left-radius-10 u-image-1"
+                                    autoplay loop muted>
+                                    <source src="{{ url('Video/INTRO.mp4') }}" type="video/mp4" />
+                                </video> --}}
+                                <div id="carouselVideoExample" class="carousel slide carousel-fade"
+                                    data-mdb-ride="carousel">
+                                    <!-- Indicators -->
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-mdb-target="#carouselVideoExample"
+                                            data-mdb-slide-to="0" class="active" aria-current="true"
+                                            aria-label="Slide 1"></button>
+                                        <button type="button" data-mdb-target="#carouselVideoExample"
+                                            data-mdb-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-mdb-target="#carouselVideoExample"
+                                            data-mdb-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+
+                                    <!-- Inner -->
+                                    <div class="carousel-inner">
+                                        <!-- Single item -->
+                                        <div class="carousel-item active">
+                                            <video class="img-fluid" autoplay loop muted>
+                                                <source src="{{ url('Video/INTRO.mp4') }}" type="video/mp4" />
+                                            </video>
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>INTRO</h5>
+                                                <p>
+                                                    CV SATRIA MEDIA UTAMA
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Single item -->
+                                        <div class="carousel-item">
+                                            <video class="img-fluid" autoplay loop muted>
+                                                <source src="{{ url('Video/test.mp4') }}" type="video/mp4" />
+                                            </video>
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5></h5>
+                                                <p>
+
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
                             </div>
+                            <!-- Inner -->
+
+                            <!-- Controls -->
+                            <button class="carousel-control-prev" type="button"
+                                data-mdb-target="#carouselVideoExample" data-mdb-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-mdb-target="#carouselVideoExample" data-mdb-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
+                        <!-- Carousel wrapper -->
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     </section>
     <section class="u-align-right u-clearfix u-grey-10 u-section-2" id="carousel_a57c">
@@ -124,8 +197,9 @@
                             <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
                                 src="images/icons8-event-64.png" alt="" data-image-width="64"
                                 data-image-height="64">
-                            <h4 class="u-text u-text-1" data-animation-name="fadeIn" data-animation-duration="1750"
-                                data-animation-direction="Up" data-animation-delay="500"> EVENT</h4>
+                            <h4 class="u-text u-text-1" data-animation-name="customAnimationIn"
+                                data-animation-duration="1000" data-animation-direction="Up"
+                                data-animation-delay="500"> EVENT</h4>
                         </div>
                     </div>
                 </div>
@@ -145,7 +219,8 @@
                 <div class="u-container-layout u-container-layout-3">
                     <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-3"
                         src="images/icons8-crew-64.png" alt="" data-image-width="64" data-image-height="64">
-                    <h3 class="u-text u-text-default u-text-3">CREW3</h3>
+                    <h3 class="u-text u-text-default u-text-3" data-animation-name="customAnimationIn"
+                        data-animation-duration="1000">CREW</h3>
                 </div>
             </div>
         </div>
@@ -161,9 +236,15 @@
                             <div
                                 class="u-align-left u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
                                 <div class="u-container-layout u-container-layout-1">
-                                    <img class="u-expanded-width u-image u-image-1" src="images/image.png"
+                                    {{-- <img class="u-expanded-width u-image u-image-1" src="images/image.png"
                                         data-image-width="317" data-image-height="245" data-animation-name="fadeIn"
-                                        data-animation-duration="2000" data-animation-direction="Left">
+                                        data-animation-duration="2000" data-animation-direction="Left"> --}}
+                                    <div>
+                                        <video class="u-expanded-width u-image u-image-1 hover-to-play" autoplay loop
+                                            muted>
+                                            <source src="{{ url('Video/test.mp4') }}" type="video/mp4" />
+                                        </video>
+                                    </div>
                                     <h2 class="u-text u-text-1" data-animation-name="fadeIn"
                                         data-animation-duration="1750" data-animation-direction="Left">&nbsp;​UP
                                         COMING</h2>
@@ -172,7 +253,7 @@
                                     <a href="https://nicepage.com/static-site-generator"
                                         class="u-active-black u-border-none u-btn u-button-style u-custom u-hover-black u-palette-2-base u-text-active-white u-text-hover-white u-text-white u-btn-1"
                                         data-animation-name="zoomIn" data-animation-duration="1500"
-                                        data-animation-direction="">read more</a>
+                                        data-animation-direction="">DETAIL</a>
                                 </div>
                             </div>
                         </div>
@@ -183,8 +264,9 @@
                                 <div class="u-layout-row">
                                     <div class="u-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-2"
                                         src="">
-                                        <div
-                                            class="u-container-layout u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-xl u-valign-top-sm u-valign-top-xs u-container-layout-2">
+                                        <div class="u-container-layout u-container-layout-2">
+                                            <h2 class="u-hover-feature u-text u-text-default u-text-3">PREVIEW EVENT
+                                            </h2>
                                             <img class="u-expanded-width u-image u-image-2" src="images/event.png"
                                                 data-image-width="852" data-image-height="735"
                                                 data-animation-name="fadeIn" data-animation-duration="2000"
@@ -193,8 +275,7 @@
                                     </div>
                                     <div
                                         class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-3">
-                                        <div
-                                            class="u-container-layout u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-xl u-valign-top-sm u-valign-top-xs u-container-layout-3">
+                                        <div class="u-container-layout u-container-layout-3">
                                             <img class="u-expanded-width u-image u-image-3" src="images/event3.png"
                                                 data-image-width="857" data-image-height="628"
                                                 data-animation-name="fadeIn" data-animation-duration="2000"
@@ -208,10 +289,10 @@
                                     <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-4"
                                         src="">
                                         <div class="u-container-layout" src="">
-                                            <img class="u-expanded-width-sm u-expanded-width-xs u-image u-image-4"
-                                                src="images/event2.png" data-image-width="742"
-                                                data-image-height="557" data-animation-name="fadeIn"
-                                                data-animation-duration="2000" data-animation-direction="Up">
+                                            <img class="u-image u-image-4" src="images/event2.png"
+                                                data-image-width="742" data-image-height="557"
+                                                data-animation-name="fadeIn" data-animation-duration="2000"
+                                                data-animation-direction="Up">
                                         </div>
                                     </div>
                                 </div>
@@ -221,6 +302,7 @@
                 </div>
             </div>
         </div>
+
     </section>
     <section class="u-clearfix u-section-4" id="carousel_5b20">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
@@ -252,45 +334,7 @@
             </div>
         </div>
     </section>
-    <section class="u-align-left u-clearfix u-image u-section-5" id="carousel_1ae5" data-image-width="1280"
-        data-image-height="720">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <h1 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-1"
-                data-animation-name="slideIn" data-animation-duration="2000" data-animation-direction="Left"> Free
-                fitness training</h1>
-            <h3 class="u-text u-text-body-alt-color u-text-2"> Mollis aliquam ut porttitor leo a diam. Ac tortor vitae
-                purus faucibus ornare. Sapien faucibus et molestie ac feugiat. Mauris in aliquam sem fringilla ut morbi
-                tincidunt augue interdum. </h3>
-            <div class="u-form u-form-1">
-                <form action="https://forms.nicepagesrv.com/Form/Process"
-                    class="u-clearfix u-form-horizontal u-form-spacing-0 u-inner-form" style="padding: 0px;"
-                    source="email" name="form">
-                    <div class="u-form-email u-form-group">
-                        <label for="email-cd2c" class="u-form-control-hidden u-label u-label-1">Email</label>
-                        <input type="email" placeholder="your email" id="email-cd2c" name="email"
-                            class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-text-grey-50 u-white u-input-1"
-                            required="">
-                    </div>
-                    <div class="u-align-left u-form-group u-form-submit">
-                        <a href="#"
-                            class="u-border-1 u-border-palette-2-base u-btn u-btn-submit u-button-style u-palette-2-base u-btn-1">contact
-                            us</a>
-                        <input type="submit" value="submit" class="u-form-control-hidden">
-                    </div>
-                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors
-                        then try again. </div>
-                    <input type="hidden" value="" name="recaptchaResponse">
-                    <input type="hidden" name="formServices" value="">
-                </form>
-            </div>
-            <p class="u-text u-text-body-alt-color u-text-default u-text-3">Image from <a
-                    href="https://freepik.com/photos/woman"
-                    class="u-active-none u-border-1 u-border-active-palette-3-base u-border-hover-palette-3-base u-border-no-left u-border-no-right u-border-no-top u-border-white u-btn u-button-link u-button-style u-hover-none u-none u-radius-0 u-text-body-alt-color u-btn-2">Freepik</a>
-            </p>
-        </div>
-    </section>
-    <section class="u-align-center u-clearfix u-palette-2-base u-section-6" id="carousel_3a6f">
+    <section class="u-align-center u-clearfix u-palette-2-base u-section-5" id="carousel_3a6f">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
             <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
                 <div class="u-layout">
@@ -298,14 +342,13 @@
                         <div class="u-align-center u-container-style u-layout-cell u-size-30 u-white u-layout-cell-1">
                             <div
                                 class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-container-layout-1">
-                                <h2 class="u-text u-text-default u-text-1">Join our newsletter</h2>
+                                <h2 class="u-text u-text-default u-text-1">SARAN</h2>
                                 <div class="u-align-center u-form u-form-1">
                                     <form action="https://forms.nicepagesrv.com/Form/Process"
                                         class="u-clearfix u-form-horizontal u-form-spacing-0 u-inner-form"
                                         style="padding: 0px;" source="email" name="form">
                                         <div class="u-form-email u-form-group">
-                                            <label for="email-cd2c"
-                                                class="u-form-control-hidden u-label">Email</label>
+                                            <label for="email-cd2c" class="u-label">Email</label>
                                             <input type="email" placeholder="Enter a valid email address"
                                                 id="email-cd2c" name="email"
                                                 class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
@@ -344,7 +387,7 @@
     </section>
 
 
-
+    {{-- 
     <section class="u-backlink u-clearfix u-grey-80">
         <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
             <span>Website Templates</span>
@@ -355,8 +398,21 @@
         <a class="u-link" href="" target="_blank">
             <span>Website Builder Software</span>
         </a>.
-    </section>
+    </section> --}}
 
+    <script>
+        const clip = document.querySelectorAll(".hover-to-play");
+        for (let i = 0; i < clip.length; i++) {
+            clip[i].addEventListener("mouseenter", function(e) {
+                clip[i].play();
+            });
+            clip[i].addEventListener("mouseout", function(e) {
+                clip[i].pause();
+            });
+        }
+    </script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
 </body>
 
 </html>
