@@ -19,4 +19,7 @@ Route::get('/', function () {
 
 Route::get('layouts', function () {
     return view('layouts.master');
+
+Route::get('/tampilan',Function(){
+        Return view('tampilan');
 });
