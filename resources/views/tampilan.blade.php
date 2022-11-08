@@ -101,7 +101,7 @@
                                     data-animation-delay="500"> EO Satria mediautama
                                     Adalah Penggarap Acara yang berkomitmen akan melayani sepenuh hati dan akan membuat
                                     semua acara yang kami pegang berjalan dengan lancar</p>
-                                <a href="https://nicepage.com/website-design"
+                                <a href="https://whas.me/XAy2O6b1WF"
                                     class="u-active-black u-border-none u-btn u-button-style u-custom u-custom-color-3 u-hover-black u-text-active-white u-text-hover-white u-text-white u-btn-1"
                                     data-animation-name="fadeIn" data-animation-duration="1500"
                                     data-animation-direction="Up">hubungi</a>
