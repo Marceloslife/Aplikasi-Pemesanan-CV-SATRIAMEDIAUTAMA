@@ -17,9 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('layouts', function () {
-    return view('layouts.master');
+// Route::get('layouts', function () {
+// return view('layouts.master')};
 
 Route::get('/tampilan',Function(){
-        Return view('tampilan');
+        return view('tampilan');
+    });
+
+Route::get('/smu_talent',Function(){
+return view('smu_talent');
 });
