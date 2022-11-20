@@ -27,3 +27,16 @@ Route::get('/tampilan',Function(){
 Route::get('/smu_talent',Function(){
 return view('smu_talent');
 });
+
+Route::get('/event',Function(){
+    return view('event');
+});
+
+Route::get('/crew',Function(){
+    return view('crew');
+});
+
+Route::get('/order',Function(){
+    return view('order');
+});
+
