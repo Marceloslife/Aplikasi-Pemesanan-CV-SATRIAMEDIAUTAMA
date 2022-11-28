@@ -18,7 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::get('/layout', function () {
     return view('layout.master');
 });
@@ -45,7 +44,6 @@ Route::get('/jabatan',Function(){
 Route::get('/layanan',Function(){
     Return view('layanan.home');
 });
-=======
 // Route::get('layouts', function () {
 // return view('layouts.master')};
 
