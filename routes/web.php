@@ -47,9 +47,9 @@ Route::get('/layanan',Function(){
 // Route::get('layouts', function () {
 // return view('layouts.master')};
 
-Route::get('/tampilan',Function(){
-        return view('tampilan');
-    });
+// Route::get('/tampilan',Function(){
+//         return view('tampilan');
+//     });
 
 Route::get('/smu_talent',Function(){
 return view('smu_talent');
