@@ -1,79 +1,60 @@
 @extends('layouts.master')
 @section('content')
-   <center><div class="curved" <h1>Team Crew Satria Media Utama</h1>
-    </div></center> 
-     <section id="testimonials" class="testimonials section-bg">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Testimonials</h2>
-                    <p>What they're saying about us</p>
+     &nbsp;
+      <link rel="stylesheet" href="crew.css">
+      <div class="container text-center mt-5 mb-2">
+       
+        <h1 class="mb-0">TEAM SATRIA MEDIA UTAMA</h1><span>anggota team tahun 2022-2023</span></div>
+    <div class="container fluid ">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="bg-white p-3 text-center rounded box"><img class="img-responsive rounded-circle" src="images/kak raka.png" width="90">
+                    <h5 class="mt-3 name">Rahmat kurniawan</h5><span class="work d-block">Direktur</span><span class="work d-block"></span>
+                    {{-- <img class="img-responsive rounded-circle" src="images/kak raka.png" width="40"> --}}
+                    <div class="mt-4 about"><span>is a long established fact that eader&nbsp; </span></div>
+                    <div class="mt-4">
+                     <a href="https://www.instagram.com/rakawong_id/" class="btn btn-info" role="button">Profile</a>
+                    </div>
                 </div>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                    risus at semper.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Saul Goodman</h3>
-                                <h4>Ceo &amp; Founder</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                    cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                    legam anim culpa.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Sara Wilsson</h3>
-                                <h4>Designer</h4>
-                            </div>
-                        </div><!-- End testimonial item --> --}}
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                    veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
-                                    minim.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Jena Karlis</h3>
-                                <h4>Store Owner</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                    fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                                    dolore labore illum veniam.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Matt Brandon</h3>
-                                <h4>Freelancer</h4>
-                            </div>
-                        </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-white p-3 text-center rounded box"><img class="img-responsive rounded-circle" src="images/puguh.png" width="90">
+                    <h5 class="mt-3 name">PUGUH DWI SATRIAWATI</h5><span class="work d-block">Wakil Direktur I</span><span class="work d-block">ID NO: 0140.092-002</span>
+                    <div class="mt-4 about"><span>No:08</span></div>
+                    <div class="mt-4">
+                        <a href="https://www.instagram.com/rakawong_id/" class="btn btn-info" role="button">Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-white p-3 text-center rounded box"><img class="img-responsive rounded-circle" src="images/wahyu.png" width="90">
+                    <h5 class="mt-3 name">Wahyu panji</h5><span class="work d-block">Wakil Direktur II</span><span class="work d-block"></span>
+                    <div class="mt-4 about"><span>is a long established fact that eader&nbsp; will be distracted by the readable content.</span></div>
+                    <div class="mt-4">
+                        <a href="https://www.instagram.com/rakawong_id/" class="btn btn-info" role="button">Profile</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                <div class="bg-white p-3 text-center rounded box"><img class="img-responsive rounded-circle" src="images/wahyu.png" width="90">
+                    <h5 class="mt-3 name">Wahyu panji</h5><span class="work d-block">Wakil Direktur II</span><span class="work d-block"></span>
+                    <div class="mt-4 about"><span>is a long established fact that eader&nbsp; will be distracted by the readable content.</span></div>
+                    <div class="mt-4">
+                        <a href="https://www.instagram.com/rakawong_id/" class="btn btn-info" role="button">Profile</a>
+                    </div>
+                </div>
+            {{-- <div class="col-md-3">
+                <div class="bg-white p-3 text-center rounded box"><img class="img-responsive rounded-circle" src="https://i.imgur.com/MZm1LNz.jpg" width="90">
+                    <h5 class="mt-3 name">Marry Jones</h5><span class="work d-block">Comapay agents house</span><span class="work d-block">real estate</span>
+                    <div class="mt-4 about"><span>is a long established fact that eader&nbsp; will be distracted by the readable content.</span></div>
+                    <div class="mt-4">
+                        <h6 class="v-profile">View Profile</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+   </div>
+    &nbsp;
 @endsection
