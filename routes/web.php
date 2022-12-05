@@ -40,3 +40,10 @@ Route::get('/order',Function(){
     return view('order');
 });
 
+Route::get('/Start',Function(){
+    return view('Start');
+});
+
+
+
+
