@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnggotasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,12 +18,38 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/layout', function () {
+    return view('layout.master');
+});
+
+Route::get('/tampilan',Function(){
+        Return view('tampilan');
+});
+
+Route::get('/portofolio',Function(){
+    Return view('portofolio.create');
+});
+
+Route::get('/home',Function(){
+    Return view('anggota.home');
+});
+
+Route::get('/divisi',Function(){
+    Return view('divisi.home');
+});
+Route::get('/jabatan',Function(){
+    Return view('jabatan.home');
+});
+
+Route::get('/layanan',Function(){
+    Return view('layanan.home');
+});
 // Route::get('layouts', function () {
 // return view('layouts.master')};
 
-Route::get('/tampilan',Function(){
-        return view('tampilan');
-    });
+// Route::get('/tampilan',Function(){
+//         return view('tampilan');
+//     });
 
 Route::get('/smu_talent',Function(){
 return view('smu_talent');
@@ -38,6 +65,7 @@ Route::get('/crew',Function(){
 
 Route::get('/order',Function(){
     return view('order');
+<<<<<<< HEAD
 });
 
 Route::get('/Start',Function(){
@@ -47,3 +75,6 @@ Route::get('/Start',Function(){
 
 
 
+=======
+});
+>>>>>>> f35b294381c1eedb19e6dec43296eac72072c9ad
