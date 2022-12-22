@@ -1,6 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
+<link
+  href="tampilan.css"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="tampilan.css"/>
     <section class="u-clearfix u-image u-section-1" id="carousel_4545" data-image-width="1980" data-image-height="1100">
         <div class="u-clearfix u-sheet u-sheet-1">
             <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
@@ -147,8 +152,8 @@
                 <div class="u-container-layout u-container-layout-4">
                     <a href="http://127.0.0.1:8000/smu_talent"><img
                             class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4"
-                            src="images/icons8-crew-64.png" alt="" data-image-width="64"
-                            data-image-height="64"></a>
+                            src="images/LOGO SMU_T 2022.PNG" alt="" data-image-width="200"
+                            data-image-height="100"></a>
                     <h3 class="u-text u-text-default u-text-4" data-animation-name="customAnimationIn"
                         data-animation-duration="1000">SMU_TALENT</h3>
                 </div>
@@ -170,7 +175,7 @@
                                         data-image-width="317" data-image-height="245" data-animation-name="fadeIn"
                                         data-animation-duration="2000" data-animation-direction="Left"> --}}
                                     <video class="u-expanded-width u-image u-image-1" autoplay loop muted>
-                                        <source src="{{ url('Video/INTRO.mp4') }}" type="video/mp4" />
+                                        <source src="{{ url('Video/Video.mp4') }}" type="video/mp4" />
                                     </video>
                                     <h2 class="u-text u-text-1" data-animation-name="fadeIn"
                                         data-animation-duration="1750" data-animation-direction="Left">
@@ -181,12 +186,12 @@
                                         UTAMA yang akan datang</p>
                                     <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-primary" data-mdb-toggle="modal"
-                                        data-mdb-target="#exampleModal">
+                                        data-mdb-target="#modaldetail">
                                         DETAIL
                                     </button>
 
                                     <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    <div class="modal fade" id="modaldetail" tabindex="-1"
                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
@@ -293,7 +298,7 @@
                                     hati
                                     dan
                                     akan membuat semua acara yang kami pegang berjalan dengan lancar</p>
-                                <a href="https://nicepage.app"
+                                <a href="http://127.0.0.1:8000/Start"
                                     class="u-active-black u-border-none u-btn u-button-style u-custom-color-1 u-hover-black u-text-active-white u-text-hover-white u-text-white u-btn-1"
                                     data-animation-name="zoomIn" data-animation-duration="1500"
                                     data-animation-direction="" data-animation-delay="0">Start now</a>
@@ -305,51 +310,113 @@
         </div>
     </section>
     <section class="u-align-center u-clearfix u-palette-2-base u-section-5" id="carousel_3a6f">
+        
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
             <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
                 <div class="u-layout">
                     <div class="u-layout-col">
                         <div class="u-align-center u-container-style u-layout-cell u-size-30 u-white u-layout-cell-1">
-                            <div
-                                class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-container-layout-1">
-                                <h2 class="u-text u-text-default u-text-1">SARAN</h2>
-                                <div class="u-align-center u-form u-form-1">
-                                    <form action="https://forms.nicepagesrv.com/Form/Process"
-                                        class="u-clearfix u-form-horizontal u-form-spacing-0 u-inner-form"
-                                        style="padding: 0px;" source="email" name="form">
-                                        <div class="u-form-email u-form-group">
-                                            <label for="email-cd2c" class="u-label">Email</label>
-                                            <input type="email" placeholder="Enter a valid email address"
-                                                id="email-cd2c" name="email"
-                                                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
-                                                required="">
-                                        </div>
-                                        <div class="u-align-left u-form-group u-form-submit">
-                                            <a href="#"
-                                                class="u-active-palette-2-dark-1 u-border-1 u-border-active-palette-2-dark-1 u-border-hover-palette-2-dark-1 u-border-palette-2-base u-btn u-btn-submit u-button-style u-hover-palette-2-dark-1 u-palette-2-base u-btn-1">notify
-                                                me</a>
-                                            <input type="submit" value="submit" class="u-form-control-hidden">
-                                        </div>
-                                        <div class="u-form-send-message u-form-send-success"> Thank you!
-                                            Your
-                                            message
-                                            has been sent. </div>
-                                        <div class="u-form-send-error u-form-send-message"> Unable to send
-                                            your
-                                            message. Please fix errors then try again. </div>
+<div class="container">
+   <div class="container-fluid px-5 my-5">
+  <div class="row justify-content-center">
+    <div class="col-xl-10">
+      <div class="card border-0 rounded-3 shadow-lg overflow-hidden">
+        <div class="card-body p-0">
+          <div class="row g-0">
+            <div class="col-sm-6 d-none d-sm-block bg-image"></div>
+            <div class="col-sm-6 p-4">
+              <div class="text-center">
+                <div class="h3 fw-light">Contact Form</div>
+                <p class="mb-4 text-muted">Split layout contact form</p>
+              </div>
+
+              <!-- * * * * * * * * * * * * * *
+          // * * SB Forms Contact Form * *
+          // * * * * * * * * * * * * * * *
+
+          // This form is pre-integrated with SB Forms.
+          // To make this form functional, sign up at
+          // https://startbootstrap.com/solution/contact-forms
+          // to get an API token!
+          -->
+
+              <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+
+                <!-- Name Input -->
+                <div class="form-floating mb-3">
+                  <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+                  <label for="name">Name</label>
+                  <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                </div>
+
+                <!-- Email Input -->
+                <div class="form-floating mb-3">
+                  <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                  <label for="emailAddress">Email Address</label>
+                  <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                  <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                </div>
+
+                <!-- Message Input -->
+                <div class="form-floating mb-3">
+                  <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+                  <label for="message">Message</label>
+                  <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                </div>
+
+                <!-- Submit success message -->
+                <div class="d-none" id="submitSuccessMessage">
+                  <div class="text-center mb-3">
+                    <div class="fw-bolder">Form submission successful!</div>
+                    <p>To activate this form, sign up at</p>
+                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                  </div>
+                </div>
+
+                <!-- Submit error message -->
+                <div class="d-none" id="submitErrorMessage">
+                  <div class="text-center text-danger mb-3">Error sending message!</div>
+                </div>
+
+                <!-- Submit button -->
+                <div class="d-grid">
+                  <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+                </div>
+              </form>
+              <!-- End of contact form -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CDN Link to SB Forms Scripts -->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+                                       {{-- <form
+  action="https://formspree.io/f/mqkjvdjk"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+                                       
                                         <input type="hidden" value="" name="recaptchaResponse">
                                         <input type="hidden" name="formServices" value="">
-                                    </form>
+                                    </form> --}}
                                 </div>
-                            </div>
-                        </div>
-                        <div
-                            class="u-align-center u-container-style u-custom-color-1 u-layout-cell u-size-30 u-layout-cell-2">
-                            <div class="u-container-layout u-container-layout-2">
-                                <h3 class="u-text u-text-default u-text-2">follow us</h3>
-                                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
-                                    src="images/instagram-logo1.png" alt="" data-image-width="1915"
-                                    data-image-height="1915" data-href="https://www.instagram.com/satriamediautama_eo/">
                             </div>
                         </div>
                     </div>

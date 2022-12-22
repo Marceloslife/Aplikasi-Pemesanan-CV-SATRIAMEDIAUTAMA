@@ -103,19 +103,39 @@
                     </div>
                 </section>
 
-                <section class="u-backlink u-clearfix u-grey-80">
-                    <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-                        <span></span>
-                    </a>
-                    <p class="u-text">
-                        <span></span>
-                    </p>
-                    <a class="u-link" href="" target="_blank">
-                        <span></span>
-                    </a>
-                </section>
-                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+               <div class="container my-5">
 
+  <footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/satriamediautama_eo/" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    
+    <a class="text-white" href="">CV SATRIA MEDIA UTAMA</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+  
+</div>
+<!-- End of .container -->
 </body>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"
+></script>
+
 
 </html>

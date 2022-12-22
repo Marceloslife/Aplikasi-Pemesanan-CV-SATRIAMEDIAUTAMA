@@ -102,3 +102,7 @@ Route::resource('/tabelorder', TabelorderController::class);
 Route::resource('/anggota', AnggotaController::class);
 
 Route::resource('/tabelanggota', TabelanggotaController::class);
+
+Route::get('/Start',Function(){
+    return view('Start');
+});
