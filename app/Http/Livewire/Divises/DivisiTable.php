@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Divises;
 
-use App\Models\divisis;
+use App\Models\Divisis;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -20,7 +20,7 @@ class DivisiTable extends Component
     public function render()
     {
         return view('livewire.divises.divisi-table',[
-            'divisis' => divisis::orderBy('id', 'desc')->paginate(5)
+            'divisis' => Divisis::orderBy('id', 'desc')->paginate(5)
         ]);
     }
 
@@ -40,7 +40,7 @@ class DivisiTable extends Component
             'nama_divisi' => $this->nama_divisi,
         ];
         
-        divisis::where('id', $this->divisi_id)->update($data);
+        Divisis::where('id', $this->divisi_id)->update($data);
         $this->divisi_id = NULL;
         $this->nama_divisi = NULL;
         $this->emit('divisiStore');
@@ -50,12 +50,12 @@ class DivisiTable extends Component
     {
         $this->divisi_id = $id;
         
-        $divisi = divisis::find($id);
+        $divisi = Divisis::find($id);
         $this->dispatchBrowserEvent('divisiDeleteConfirmation', ['divisi' => $divisi]);
     }
 
     public function divisiDestroyer()
     {
-        divisis::find($this->divisi_id)->delete();
+        Divisis::find($this->divisi_id)->delete();
     }
 }

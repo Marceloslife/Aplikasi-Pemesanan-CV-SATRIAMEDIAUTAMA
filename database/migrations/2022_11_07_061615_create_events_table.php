@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('poster_event', 256);
             $table->string('link_teaser_event', 100);
             $table->text('deskripsi_event'); 
+            $table->text('tanggaltempat');
+            $table->text('link_acara');
         });
     }
 

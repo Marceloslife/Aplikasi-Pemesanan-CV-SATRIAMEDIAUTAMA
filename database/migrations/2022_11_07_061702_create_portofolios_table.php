@@ -18,7 +18,10 @@ return new class extends Migration
             $table->timestamps();
             $table->string('judul', 45);
             $table->string('foto', 256);
-            $table->text('keterangan'); 
+            $table->text('keterangan');
+            $table->text('tanggaltempat');
+            $table->text('link_acara');
+
         });
     }
 

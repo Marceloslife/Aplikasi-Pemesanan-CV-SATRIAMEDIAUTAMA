@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Portofolio')
+@section('title', 'event')
 
 @section('content')
     <div class="container-fluid">
@@ -10,22 +10,22 @@
                 <!-- general form elements -->
                 <div class="card card-secondary">
                     <div class="card-header">
-                        <h3 class="card-title">Tambah Portofolio</h3>
+                        <h3 class="card-title">Tambah Event</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form action="{{ route('portofolio.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('event.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="judul">Judul</label>
-                                <input type="text" class="form-control" id="judul" name="judul"
-                                    placeholder="Masukkan Judul" required>
+                                <label for="nama_event">nama event</label>
+                                <input type="text" class="form-control" id="nama_event" name="nama_event"
+                                    placeholder="Masukkan Nama Event" required>
                             </div>
                             <div class="form-group">
-                                <label for="keterangan">Keterangan Potrofolio</label>
-                                <input type="text" class="form-control" name="keterangan"
-                                    placeholder="Masukkan keterangan" required>
+                                <label for="keterangan">deskripsi event</label>
+                                <input type="text" class="form-control" name="deskripsi_event"
+                                    placeholder="Masukkan Deskripsi Event" required>
                             </div>
                             <div class="form-group">
                                 <label for="tanggaltempat">tanggal tempat Potrofolio</label>
@@ -40,7 +40,13 @@
                             <div class="form-group">
                                 <label for="foto">Upload Foto</label>
                                 <br>
-                                <input type="file" name="foto" required>
+                                <input type="file" name="poster_event" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Video">Upload Teaser</label>
+                                <br>
+                                <input type="file" name="link_teaser_event" required>
                             </div>
 
                         </div>

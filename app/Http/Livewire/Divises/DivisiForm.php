@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Divises;
 
-use App\Models\divisis;
+use App\Models\Divisis;
 use Livewire\Component;
 
 class DivisiForm extends Component
@@ -21,7 +21,7 @@ class DivisiForm extends Component
         $data = [
             'nama_divisi' => $this->nama_divisi,
         ];
-        divisis::create($data);
+        Divisis::create($data);
         $this->nama_divisi = NULL;
         $this->emit('divisiStore');
     }

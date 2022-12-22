@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Jabatan;
 
-use App\Models\jabatans;
+use App\Models\Jabatans;
 use Livewire\Component;
 
 class JabatansForm extends Component
@@ -21,7 +21,7 @@ class JabatansForm extends Component
         $data = [
             'nama_jabatan' => $this->nama_jabatan,
         ];
-        jabatans::create($data);
+        Jabatans::create($data);
         $this->nama_jabatan = NULL;
         $this->emit('jabatanStore');
     }

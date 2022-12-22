@@ -1,6 +1,14 @@
 <?php
 
-use App\Http\Controllers\AnggotasController;
+use App\Http\Controllers\AnggotaController;
+// use App\Http\Controllers\AnggotasController;
+use App\Http\Controllers\PortofolioController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\TabelanggotaController;
+use App\Http\Controllers\TabeleventController;
+use App\Http\Controllers\TabelorderController;
+use App\Http\Controllers\TabelportofolioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,9 +38,6 @@ Route::get('/portofolio',Function(){
     Return view('portofolio.create');
 });
 
-Route::get('/home',Function(){
-    Return view('anggota.home');
-});
 
 Route::get('/divisi',Function(){
     Return view('divisi.home');
@@ -66,3 +71,34 @@ Route::get('/crew',Function(){
 Route::get('/order',Function(){
     return view('order');
 });
+
+// Route::get('/tabelportofolio',Function(){
+//     return view('portofolio.PortofolioTable');
+// });
+
+Route::resource('/tabelportofolio', TabelportofolioController::class);
+
+
+Route::get('/createportofolio',function(){
+    return view('portofolio.create');
+});
+Route::resource('/portofolio', PortofolioController::class);
+
+
+// Route::get('/createevent', function(){
+//     return view('event.create');
+// });
+Route::resource('/event', EventController::class);
+
+Route::resource('/tabelevent', TabeleventController::class);
+
+// Route::get('/createorder', function(){
+//     return view('order.create');
+// });
+Route::resource('/order', OrderController::class);
+
+Route::resource('/tabelorder', TabelorderController::class);
+
+Route::resource('/anggota', AnggotaController::class);
+
+Route::resource('/tabelanggota', TabelanggotaController::class);

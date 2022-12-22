@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Jabatan;
 
-use App\Models\jabatans;
+use App\Models\Jabatans;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -20,7 +20,7 @@ class JabatansTable extends Component
     public function render()
     {
         return view('livewire.jabatan.jabatans-table',[
-            'jabatans' => jabatans::orderBy('id', 'desc')->paginate(5)
+            'jabatans' => Jabatans::orderBy('id', 'desc')->paginate(5)
         ]);
     }
 
@@ -40,7 +40,7 @@ class JabatansTable extends Component
             'nama_jabatan' => $this->nama_jabatan,
         ];
         
-        jabatans::where('id', $this->jabatan_id)->update($data);
+        Jabatans::where('id', $this->jabatan_id)->update($data);
         $this->jabatan_id = NULL;
         $this->nama_jabatan = NULL;
         $this->emit('jabatanStore');
@@ -50,12 +50,12 @@ class JabatansTable extends Component
     {
         $this->jabatan_id = $id;
         
-        $jabatan = jabatans::find($id);
+        $jabatan = Jabatans::find($id);
         $this->dispatchBrowserEvent('jabatanDeleteConfirmation', ['jabatan' => $jabatan]);
     }
 
     public function jabatanDestroyer()
     {
-        jabatans::find($this->jabatan_id)->delete();
+        Jabatans::find($this->jabatan_id)->delete();
     }
 }

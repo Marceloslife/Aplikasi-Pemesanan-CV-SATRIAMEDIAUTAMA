@@ -14,112 +14,120 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form action="{{ route('anggotas.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('anggota.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="name">Nama</label>
-                                <input type="text" class="form-control" name='nama' placeholder="Masukkan Nama">
+                                <input type="text" class="form-control" id="name" placeholder="Masukkan Nama"
+                                    name="nama">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" name="email_address" placeholder="Enter email">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Masukkan email" name="email_address">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputNO.HP1">No.Hp</label>
-                                <input type="number" class="form-control" name="no_hp" name="no_hp"
-                                    placeholder="Enter No.Hp">
+                                <input type="number" class="form-control" id="exampleInputNo.Hp1"
+                                    placeholder="Masukkan No.Hp" name="no_hp">
                             </div>
-                            <div class="col-md-6">
+                            <!-- Date -->
+                            <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="exampleSelectBorder">Jenis Kelamin</label>
-                                    <select class="form-control select2 select2-danger"
-                                        data-dropdown-css-class="select2-danger" style="width: 100%;" name="jenis_kelamin">
-                                        <option>Pilih</option>
-                                        <option value="L">Laki-Laki</option>
-                                        <option value="P">Perempuan</option>
-                                    </select>
-                                    @error('jenis_kelamin')
-                                        <div class="text-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label for="divises_id">Nama Divisi</label>
-                                    <select name="divisions_id" class="form-control select2 select2-danger"
-                                        data-dropdown-css-class="select2-danger" style="width: 100%;">
-                                        <option value="">Pilih Nama divisi</option>
-                                        @foreach ($divisions as $item)
-                                            <option value="{{ $item->id }}">{{ $item->nama_divisi }}</option>
-                                        @endforeach
-                                    </select>
-                                    @error('divisions_id')
-                                        <div class="text-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label for="jabatans_id">Nama jabatan</label>
-                                    <select name="jabatans_id" class="form-control select2 select2-danger"
-                                        data-dropdown-css-class="select2-danger" style="width: 100%;">
-                                        <option value="">Pilih jabatan</option>
-                                        @foreach ($positions as $item)
-                                            <option value="{{ $item->id }}">{{ $item->nama_jabatan }}</option>
-                                        @endforeach
-                                    </select>
-                                    @error('positions_id')
-                                        <div class="text-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <!-- Date -->
-                                <div class="form-group">
-                                    <label>Tanggal Lahir:</label>
-                                    <div class="input-group date" id="tanggal_lahir" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" name="tanggal_lahir"
-                                            data-target="#reservationdate" />
-                                        <div class="input-group-append" data-target="#reservationdate"
-                                            data-toggle="datetimepicker">
-                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    <label>Tanggal Lahir :</label>
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                                         </div>
+                                        <input type="date" class="form-control" data-inputmask-inputformat="mm/dd/yyyy"
+                                            data-mask name="tanggal_lahir">
                                     </div>
+                                    <!-- /.input group -->
                                 </div>
-                                <div class="col-md-6">
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <!-- select -->
                                     <div class="form-group">
-                                        <label for="status">Status</label>
-                                        <select class="form-control select2 select2-danger"
-                                            data-dropdown-css-class="select2-danger" style="width: 100%;" name="status">
-                                            <option>Pilih</option>
-                                            <option value="L">Aktif</option>
-                                            <option value="P">Tidak Aktif</option>
+                                        <label>Jenis Kelamin</label>
+                                        <select class="form-control" name="jenis_kelamin">
+                                            <option value="L">Laki Laki</option>
+                                            <option value="P">Perempuan</option>
                                         </select>
-                                        @error('status')
-                                            <div class="text-danger">{{ $message }}</div>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="alamat">Alamat</label>
-                                        <input type="text" class="form-control" id="address"
-                                            placeholder="Masukkan Alamat" name="alamat">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="nik">NIK</label>
-                                        <input type="text" class="form-control" id="nik" placeholder="Masukkan NIK"
-                                            name="nik">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="no_karyawan">No Karyawan</label>
-                                        <input type="text" class="form-control" id="no_karyawan"
-                                            placeholder="Masukkan No Karyawan" name="no_karyawan">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Tanggal Bergabung:</label>
-                                        <div class="input-group date" id="tanggal_bergabung" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input"
-                                                name="tanggal_bergabung" data-target="#reservationdate" />
-                                            <div class="input-group-append" data-target="#reservationdate"
-                                                data-toggle="datetimepicker">
-                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
-                                <!-- /.card-body -->
-                            @endsection
+
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Alamat</label>
+                                <input type="text" class="form-control" name="alamat" id="address"
+                                    placeholder="Masukkan Alamat">
+                            </div>
+                            <div class="form-group">
+                                <label for="link_instagram">Link Instagram</label>
+                                <input type="text" class="form-control" id="link_instagram"
+                                    placeholder="Masukkan link instagram" name="link_instagram">
+                            </div>
+                            <div class="form-group">
+                                <label>divisi</label>
+                                <select class="form-control" name="divisi_id">
+                                    {{-- <option value="">Pilih divisi</option> --}}
+                                    @foreach ($divises as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama_divisi }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>jabatan</label>
+                                <select class="form-control" name="jabatan_id">
+                                    {{-- <option value="">Pilih jabatan</option> --}}
+                                    @foreach ($jabatans as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama_jabatan }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputNIK">NIK</label>
+                                <input type="number" class="form-control" name="nik" id="exampleInputNIK1"
+                                    placeholder="Masukkan NIK">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputnoKaryawan">No Karyawan</label>
+                                <input type="number" class="form-control" name="no_karyawan" id="exampleInputnoKaryawan"
+                                    placeholder="Masukkan noKaryawan">
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Tanggal Bergabung :</label>
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                        <input type="date" class="form-control" data-inputmask-inputformat="mm/dd/yyyy"
+                                            data-mask name="tanggal_bergabung">
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-secondary">Submit</button>
+                </div>
+                </form>
+            </div>
+            <!-- /.card -->
+
+
+            <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+
+@endsection

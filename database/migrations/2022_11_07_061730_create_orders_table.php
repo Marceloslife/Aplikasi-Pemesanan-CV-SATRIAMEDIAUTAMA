@@ -18,11 +18,12 @@ return new class extends Migration
             $table->timestamps();
             $table->string('nama_event', 45);
             $table->string('penyelenggara', 45);
-            $table->dateTime('tanggal_waktu_event'); 
+            $table->dateTime('tgl_dari');
+            $table->dateTime('tgl_sampai'); 
             $table->string('lokasi_event', 100);
             $table->char('no_hp_penyelenggara', 13);
             $table->string('email_penyelenggara', 45);
-            $table->string('layanan', 45);
+            $table->string('status', 45);
 
             $table->foreignId('layanan_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
         });

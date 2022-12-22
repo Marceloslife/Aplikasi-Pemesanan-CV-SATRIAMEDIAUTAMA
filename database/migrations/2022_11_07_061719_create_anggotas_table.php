@@ -22,12 +22,13 @@ return new class extends Migration
             $table->enum('jenis_kelamin', ['L', 'P']);
             $table->date('tanggal_lahir');
             $table->enum('status', ['Aktif', 'Tidak Aktif']);
-            $table->string('alamat', 45);
+            $table->longText('alamat');
             $table->foreignId('divises_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('jabatans_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->string('nik', 45);
             $table->string('no_karyawan', 45);
             $table->date('tanggal_bergabung');
+            $table->text('link_instagram');
         });
     }
 

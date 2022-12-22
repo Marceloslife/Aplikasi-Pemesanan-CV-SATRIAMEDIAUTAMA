@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | General Form Elements</title>
+    <title>Satria Media Utama</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -21,6 +21,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     @stack('styles')
+    @yield('css')
 
 </head>
 
@@ -152,7 +153,7 @@
             <div class="float-right d-none d-sm-block">
                 <b>Version</b> 3.2.0
             </div>
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
+            <strong>Copyright &copy; 2022-2023 <a href="">Satria Media Utama</a>.</strong> All rights
             reserved.
         </footer>
 
@@ -339,6 +340,7 @@
         }
         // DropzoneJS Demo Code End
     </script>
+    @stack('scripts1')
 </body>
 
 </html>

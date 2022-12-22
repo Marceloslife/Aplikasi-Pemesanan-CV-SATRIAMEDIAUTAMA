@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Layanan;
 
-use App\Models\layanans;
+use App\Models\Layanans;
 use Livewire\Component;
 
 class LayanansForm extends Component
@@ -21,7 +21,7 @@ class LayanansForm extends Component
         $data = [
             'nama_layanan' => $this->nama_layanan,
         ];
-        layanans::create($data);
+        Layanans::create($data);
         $this->nama_layanan = NULL;
         $this->emit('layananStore');
     }
