@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AnggotasController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,16 +65,12 @@ Route::get('/crew',Function(){
 
 Route::get('/order',Function(){
     return view('order');
-<<<<<<< HEAD
 });
 
 Route::get('/Start',Function(){
     return view('Start');
 });
 
+Route::get('/send-mail', [MailController::class, 'index']);
+// Route::get('/',[sendMai::class,'tampilan']);
 
-
-
-=======
-});
->>>>>>> f35b294381c1eedb19e6dec43296eac72072c9ad

@@ -127,14 +127,15 @@
                     </div>
                 </div>
             </div>
-            <div class="u-container-style u-custom-color-1 u-group u-shape-rectangle u-group-1"
+            <div class="u-container-style u-custom-color-1 u-group u-shape-rectangle u-group-3"
                 data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="">
-                <div class="u-container-layout u-container-layout-2">
-                    
-                    <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2"
-                        src="images/icons8-crew-64.png" alt="" data-image-width="64" data-image-height="64">
-                    <h3 class="u-text u-text-default u-text-2" data-animation-name="customAnimationIn"
-                        data-animation-duration="1000">CREW</h3>
+                <div class="u-container-layout u-container-layout-4">
+                    <a href="http://127.0.0.1:8000/crew"><img
+                            class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4"
+                            src="images/crew.PNG" alt="" data-image-width="200"
+                            data-image-height="100"></a>
+                   <center> <h3 class="u-text u-text-default u-text-4" data-animation-name="customAnimationIn"
+                        data-animation-duration="1000">CREW</h3></center>
                 </div>
             </div>
             <div class="u-container-style u-group u-palette-1-base u-shape-rectangle u-group-2"
@@ -380,7 +381,7 @@
 
                 <!-- Submit button -->
                 <div class="d-grid">
-                  <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+                <button class="btn btn-primary">send</button>
                 </div>
               </form>
               <!-- End of contact form -->
