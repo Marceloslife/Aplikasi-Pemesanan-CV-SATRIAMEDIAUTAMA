@@ -92,9 +92,9 @@ Route::resource('/event', EventController::class);
 
 Route::resource('/tabelevent', TabeleventController::class);
 
-// Route::get('/createorder', function(){
-//     return view('order.create');
-// });
+Route::get('/showanggota', function(){
+    return view('anggota.show');
+});
 Route::resource('/order', OrderController::class);
 
 Route::resource('/tabelorder', TabelorderController::class);
@@ -106,3 +106,6 @@ Route::resource('/tabelanggota', TabelanggotaController::class);
 Route::get('/Start',Function(){
     return view('Start');
 });
+
+Route::get('/approved/{id}', [OrderController::class,'approved']);
+Route::get('/canceled/{id}', [OrderController::class,'canceled']);

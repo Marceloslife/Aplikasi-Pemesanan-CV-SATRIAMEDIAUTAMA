@@ -42,7 +42,7 @@
                                             <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                                         </div>
                                         <input type="date" class="form-control" data-inputmask-inputformat="mm/dd/yyyy"
-                                            data-mask name="tanggal_lahir">
+                                            data-mask name="tanggal_lahir" required>
                                     </div>
                                     <!-- /.input group -->
                                 </div>

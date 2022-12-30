@@ -16,6 +16,8 @@ class PortofolioController extends Controller
     public function index()
     {
         //
+        // $portofolio = Portofolio::all();
+        // return view('portofolio.PortofolioTable', compact('portofolio'));
         
     }
 

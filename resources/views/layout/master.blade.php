@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="{{ asset('vendors/dist/css/adminlte.min.css') }}">
     <!-- daterange picker -->
     <link rel="stylesheet" href="{{ asset('vendors/plugins/daterangepicker/daterangepicker.css') }}">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
     <!-- Tempusdominus Bootstrap 4 -->
     <link rel="stylesheet"
         href="{{ asset('vendors/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
@@ -194,6 +196,10 @@
     <script src="{{ asset('vendors/plugins/dropzone/min/dropzone.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('vendors/dist/js/adminlte.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+    <script>
+        new MultiSelectTag('layanan')
+    </script>
     {{-- date --}}
     <script>
         $(function() {

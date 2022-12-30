@@ -27,17 +27,20 @@
                         {{-- <td><img width="100px" src="{{ asset('/storage/dokumen/' . $item->foto) }}" alt=""></td> --}}
                         {{-- <td>{{ $item->keterangan }}</td> --}}
                         <td>
-                            <a type="button" class="btn badge bg-warning"
-                                href="{{ url('portofolio/' . $item->id . '/edit') }}">Edit</a>
-                            <form action="{{ url('portofolio/' . $item->id) }}" method="POST">
-                                @csrf
-                                <input type="hidden" name="_method" value="DELETE">
-                                <button class="btn badge bg-danger">Delete</button>
-                            </form>
-                            <a type="button" class="btn badge bg-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal-{{ $item->id }}">
-                                Detail
-                            </a>
+                            <div class="d-flex inline-block">
+                                <a type="button" class="btn btn-warning mx-1"
+                                    href="{{ url('portofolio/' . $item->id . '/edit') }}">Edit</a>
+                                <form action="{{ url('portofolio/' . $item->id) }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button class="btn btn-danger mx-1 "
+                                        onclick="return confirm('Apakah anda yakin untuk menghapus Data ini?')">Delete</button>
+                                </form>
+                                <a type="button" class="btn btn-primary mx-1" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-{{ $item->id }}">
+                                    Detail
+                                </a>
+                            </div>
                         </td>
                     </tr>
                 @endforeach

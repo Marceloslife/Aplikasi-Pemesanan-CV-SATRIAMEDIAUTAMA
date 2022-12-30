@@ -31,7 +31,7 @@
                     <td>{{ $item->status }}</td>
                     <td>{{ $item->alamat }}</td>
                     <td>{{ $item->divises_id }}</td>
-                    <td>{{ $item->jabatans_id }}</td>
+                    <td>{{ $item->jabatans->jabatans }}</td>
                     <td>{{ $item->nik }}</td>
                     <td>{{ $item->no_karyawan }}</td>
                     <td>{{ $item->tanggal_bergabung }}</td>

@@ -8,5 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Divisis extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+    protected $table = 'divises';
+    protected $primaryKey = 'id';
+    protected $fillable = ['id','nama_divisi'];
+    public function anggotas()
+    {
+        return  $this->hasMany(Anggotas::class);
+    }
 }

@@ -76,7 +76,7 @@
                         <label>divises_id</label>
                     </div>
                     <div class="col-8">
-                        {{ $item->divises_id }}
+                        {{ $item->divises->nama_divisi }}
                     </div>
                 </div>
                 <br>
@@ -85,7 +85,7 @@
                         <label>jabatans_id</label>
                     </div>
                     <div class="col-8">
-                        {{ $item->jabatans_id }}
+                        {{ $item->jabatans->nama_jabatan }}
                     </div>
                 </div>
                 <br>

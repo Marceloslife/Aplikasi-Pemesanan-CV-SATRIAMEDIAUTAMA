@@ -16,8 +16,9 @@ class TabelorderController extends Controller
     public function index()
     {
         //
-        $order = Orders::all();
-        return view('order.table', compact('order'));
+        $orders = Orders::with('layanans')->get();
+        return view('order.table', compact('orders'));
+        
     }
 
     /**

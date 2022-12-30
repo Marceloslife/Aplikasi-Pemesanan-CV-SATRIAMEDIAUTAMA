@@ -58,16 +58,22 @@
                                     name="alamat" placeholder="Masukkan alamat_anggota">
                             </div>
                             <div class="form-group">
-                                <label for="divises_id">divisi</label>
-                                <input type="text" class="form-control" id="divises_id"
-                                    value="{{ "$anggota->divises_id" }}" name="divises_id"
-                                    placeholder="Masukkan divises_id_anggota">
+                                <label>divisi</label>
+                                <select class="form-control" name="divisi_id">
+                                    {{-- <option value="">Pilih divisi</option> --}}
+                                    @foreach ($divises as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama_divisi }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="jabatans_id">jabatans</label>
-                                <input type="text" class="form-control" id="jabatans_id"
-                                    value="{{ "$anggota->jabatans_id" }}" name="jabatans_id"
-                                    placeholder="Masukkan jabatans_id_anggota">
+                                <label>jabatan</label>
+                                <select class="form-control" name="jabatan_id">
+                                    {{-- <option value="">Pilih jabatan</option> --}}
+                                    @foreach ($jabatans as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama_jabatan }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="nik">nik anggota</label>

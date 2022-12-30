@@ -24,15 +24,16 @@ return new class extends Migration
             $table->char('no_hp_penyelenggara', 13);
             $table->string('email_penyelenggara', 45);
             $table->string('status', 45);
+            // $table->string('layanan');
 
-            $table->foreignId('layanan_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            // $table->foreignId('layanan_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
     /**
      * Reverse the migrations.
      *
-     * @return void
+     * @return void``
      */
     public function down()
     {

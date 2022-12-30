@@ -18,6 +18,9 @@ class AnggotaController extends Controller
     public function index()
     {
         //
+         $anggota = Anggotas::all();
+        $data = compact('anggota');
+        return view('anggota.table', $data);
     }
 
     /**
@@ -63,7 +66,7 @@ class AnggotaController extends Controller
         $simpan->link_instagram = $data['link_instagram'];
 
         $simpan->save();
-        return back();
+        return redirect('tabelanggota');
 
 
 
@@ -90,8 +93,12 @@ class AnggotaController extends Controller
     public function edit($id)
     {
         //
+        $jabatans = Jabatans::all();
+        $divises = Divisis::all();
+
          $anggota = Anggotas::find($id);
-        return view('anggota.edit')->with('anggota', $anggota);
+        return view('anggota.edit')->with('anggota', $anggota)->with('jabatans', $jabatans)->with('divises', $divises);
+        
     }
 
     /**
@@ -107,7 +114,7 @@ class AnggotaController extends Controller
         $data = $request->all();
 
         $simpan = Anggotas::find($id);
-        $simpan->nama_event = $data['nama_event'];
+        $simpan->nama = $data['nama'];
         $simpan->email_address = $data['email_address'];
         $simpan->no_hp = $data['no_hp'];
         $simpan->jenis_kelamin = $data['jenis_kelamin'];

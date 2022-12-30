@@ -17,7 +17,8 @@ class TabelanggotaController extends Controller
     {
         //
         $anggota = Anggotas::all();
-        return view('anggota.table', compact('anggota'));
+        $data = compact('anggota');
+        return view('anggota.table', $data);
     }
 
     /**

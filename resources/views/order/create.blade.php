@@ -74,21 +74,49 @@
                                     name="email_penyelenggara" placeholder="Enter email">
                             </div>
                             <div class="row">
+                                <label for="name" class="form-label">Layanan</label>
+                                <select id="layanan" name="layanan[]" multiple>
+                                    @foreach ($data as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama_layanan }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            {{-- <div class="row">
                                 <label>Layanan</label>
-                                @foreach ($data as $item)
-                                    <div class="col-sm-2">
+                             
+                                <div class="col-sm-2">
 
-                                        <div class="form-group clearfix">
-                                            <div class="icheck-primary d-inline">
-                                                <input type="checkbox" id="checkboxPrimary1" value="{{ $item->id }}"
-                                                    name="layanan_id[]">
-                                                <label for="checkboxPrimary1">{{ $item->nama_layanan }}
-                                                </label>
-                                            </div>
+                                    <div class="form-group clearfix">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary1" value="MC" name="layanan[]">
+                                            <label for="checkboxPrimary1">MC
+                                            </label>
                                         </div>
                                     </div>
-                                @endforeach
-                            </div>
+                                </div>
+                                <div class="col-sm-2">
+
+                                    <div class="form-group clearfix">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary1" value="Tenda" name="layanan[]">
+                                            <label for="checkboxPrimary1">Tenda
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+
+                                    <div class="form-group clearfix">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary1" value="Event Organizer"
+                                                name="layanan[]">
+                                            <label for="checkboxPrimary1">Event Organizer
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div> --}}
 
                             <!-- /.card-body -->
 
