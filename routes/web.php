@@ -12,7 +12,7 @@ use App\Http\Controllers\TabelorderController;
 use App\Http\Controllers\TabelportofolioController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -127,11 +127,18 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('/user', UserController::class);
 
+<<<<<<< HEAD
+=======
+Route::get('/order',Function(){
+    return view('order');
+});
+>>>>>>> email
 
 Route::get('/Start',Function(){
     return view('Start');
 });
 
+<<<<<<< HEAD
 // Route::get('/dashboard', function () {
 //     return view('order.table');
 // })->middleware("auth");
@@ -140,3 +147,8 @@ require __DIR__.'/auth.php';
 
 Route::get('/approved/{id}', [OrderController::class,'approved']);
 Route::get('/canceled/{id}', [OrderController::class,'canceled']);
+=======
+Route::get('/send-mail', [MailController::class, 'index']);
+// Route::get('/',[sendMai::class,'tampilan']);
+
+>>>>>>> email
