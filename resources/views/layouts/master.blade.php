@@ -7,7 +7,7 @@
     <meta name="keywords"
         content="EO SATRIA MEDIA UTAMA, ​Gym and Fitness, ​Free fitness training, Why Us, ​Gym and Fitness, 350, 16, 8, ​Just Train, Join our newsletter, INTUITIVE">
     <meta name="description" content="">
-    <title>LOGIN</title>
+    <title>Satria Media Utama</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
     <link rel="stylesheet" href="LOGIN.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
@@ -35,11 +35,11 @@
 		"name": ""
 }</script>
     <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="LOGIN">
+    <meta property="og:title" content="Satria Media Utama">
     <meta property="og:type" content="website">
 </head>
 
-<body data-home-page="LOGIN.html" data-home-page-title="LOGIN" class="u-body u-xl-mode" data-lang="en">
+<body data-home-page="LOGIN.html" data-home-page-title="Satria Media Utama" class="u-body u-xl-mode" data-lang="en">
     <div class="container">
         <div class="row">
             <div class="col-sm">
@@ -48,7 +48,7 @@
                         <div class="menu-collapse"
                             style="font-size: 1rem; letter-spacing: 0px; text-transform: uppercase; font-weight: 500;">
                             <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                                href="#">
+                                href="/http://127.0.0.1:8000/order">
                                 <svg class="u-svg-link" viewBox="0 0 24 24">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
                                 </svg>
@@ -67,7 +67,7 @@
                             <ul class="u-nav u-spacing-2 u-unstyled u-nav-1">
                                 <li class="u-nav-item"><a
                                         class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white"
-                                        href="http://127.0.0.1:8000/tampilan" style="padding: 10px 20px;">LOGIN</a>
+                                        href="http://127.0.0.1:8000/order" style="padding: 10px 20px;">login</a>
                                 </li>
                             </ul>
                         </div>
@@ -76,21 +76,23 @@
                                 class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
                                 <div class="u-inner-container-layout u-sidenav-overflow">
                                     <div class="u-menu-close"></div>
-                                    <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
-                                        <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                                                href="LOGIN.html">LOGIN</a>
-                                        </li>
-                                    </ul>
+                                    <a href="/http://127.0.0.1:8000/order">
+                                        <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                                            <li class="u-nav-item"><a class="u-button-style u-nav-link">login</a>
+                                            </li>
+                                        </ul>
+                                    </a>
                                 </div>
                             </div>
                             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
                         </div>
                     </nav>
-                   <img
-                        class="u-hover-feature u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
-                        src="images/logo.png" alt="" data-image-width="1080" data-image-height="1080"
-                        data-animation-name="customAnimationIn" data-animation-duration="1000"
-                        data-animation-direction="Left"> <a href="http://127.0.0.1:8000/tampilan"></a>
+                    <a href="/">
+                        <img class="u-hover-feature u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
+                            src="images/logo.png" alt="" data-image-width="1080" data-image-height="1080"
+                            data-animation-name="customAnimationIn" data-animation-duration="1000"
+                            data-animation-direction="Left">
+                    </a>
                 </header>
                 <section class="u-clearfix u-image u-section-1" id="carousel_4545" data-image-width="1980"
                     data-image-height="1100">
@@ -103,39 +105,36 @@
                     </div>
                 </section>
 
-               <div class="container my-5">
+                <div class="container my-5">
 
-  <footer class="bg-dark text-center text-white">
-  <!-- Grid container -->
-  <div class="container p-4 pb-0">
-    <!-- Section: Social media -->
-    <section class="mb-4">
+                    <footer class="bg-dark text-center text-white">
+                        <!-- Grid container -->
+                        <div class="container p-4 pb-0">
+                            <!-- Section: Social media -->
+                            <section class="mb-4">
 
-      <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/satriamediautama_eo/" role="button"
-        ><i class="fab fa-instagram"></i
-      ></a>
+                                <!-- Instagram -->
+                                <a class="btn btn-outline-light btn-floating m-1"
+                                    href="https://www.instagram.com/satriamediautama_eo/" role="button"><i
+                                        class="fab fa-instagram"></i></a>
 
-    </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
+                            </section>
+                            <!-- Section: Social media -->
+                        </div>
+                        <!-- Grid container -->
 
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    
-    <a class="text-white" href="">CV SATRIA MEDIA UTAMA</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-  
-</div>
-<!-- End of .container -->
+                        <!-- Copyright -->
+                        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+
+                            <a class="text-white" href="">CV SATRIA MEDIA UTAMA</a>
+                        </div>
+                        <!-- Copyright -->
+                    </footer>
+
+                </div>
+                <!-- End of .container -->
 </body>
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"
-></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
 
 
 </html>

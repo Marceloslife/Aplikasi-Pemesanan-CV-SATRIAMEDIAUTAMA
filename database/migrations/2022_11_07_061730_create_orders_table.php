@@ -23,7 +23,9 @@ return new class extends Migration
             $table->string('lokasi_event', 100);
             $table->char('no_hp_penyelenggara', 13);
             $table->string('email_penyelenggara', 45);
-            $table->string('status', 45);
+            $table->string('status', 45)->default('Permintaan Dikirim');
+            $table->bigInteger('user_id');
+            $table->text('deskripsi');
             // $table->string('layanan');
 
             // $table->foreignId('layanan_id')->constrained()->onDelete('cascade')->onUpdate('cascade');

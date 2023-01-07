@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('nik', 45);
             $table->string('no_karyawan', 45);
             $table->date('tanggal_bergabung');
+            $table->string('foto', 256);
             $table->text('link_instagram');
         });
     }

@@ -65,13 +65,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="no_hp_penyelenggara">No HP Penyelenggara</label>
-                                <input type="text" class="form-control" id="no_hp_penyelenggara"
+                                <input type="number" class="form-control" id="no_hp_penyelenggara"
                                     name="no_hp_penyelenggara" placeholder="Masukkan No HP Penyelenggara" required>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Email Penyelenggara</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    name="email_penyelenggara" placeholder="Enter email">
+                                <label for="email">Email Penyelenggara</label>
+                                <input type="email" class="form-control" id="email" name="email_penyelenggara"
+                                    placeholder="Enter email">
                             </div>
                             <div class="row">
                                 <label for="name" class="form-label">Layanan</label>
@@ -80,7 +80,25 @@
                                         <option value="{{ $item->id }}">{{ $item->nama_layanan }}</option>
                                     @endforeach
                                 </select>
+                                {{-- 
+                                <select id="layanan" name="layanan[]" onchange="toggle(this.value)">
+                                    @foreach ($data as $item)
+                                        <option value="{{ $item->nama_layanan }}">{{ $item->nama_layanan }}
+                                        </option>
+                                    @endforeach
+                                </select> --}}
                             </div>
+                            <div class="form-group">
+                                <label for="deskripsi">deskripsi</label>
+                                <input type="text" class="form-control" name="deskripsi" placeholder="Masukkan deskripsi"
+                                    required>
+                                <input type="text" class="form-control" name="user_id"
+                                    value="{{ Auth::user()->id }}"style="display: none">
+                            </div>
+                            {{-- <label for="">Deskripsi layanan</label>
+                            <input type="text" name="" id="">
+                            <input type="text" class="form-control" name="user_id" value="{{ Auth::user()->id }}"
+                                style="display: none"> --}}
                             {{-- <div class="row">
                                 <label>Layanan</label>
                              
@@ -132,4 +150,13 @@
             </div>
             <!-- /.row -->
         </div><!-- /.container-fluid -->
+        <script>
+            function toggle(value) {
+                if (value == "MC") {
+                    console.log("SAYA");
+                } else {
+                    console.log("KNTL")
+                }
+            }
+        </script>
     @endsection

@@ -66,6 +66,11 @@
                                     placeholder="Masukkan Alamat">
                             </div>
                             <div class="form-group">
+                                <label for="foto">Upload Foto</label>
+                                <br>
+                                <input type="file" name="foto" required>
+                            </div>
+                            <div class="form-group">
                                 <label for="link_instagram">Link Instagram</label>
                                 <input type="text" class="form-control" id="link_instagram"
                                     placeholder="Masukkan link instagram" name="link_instagram">

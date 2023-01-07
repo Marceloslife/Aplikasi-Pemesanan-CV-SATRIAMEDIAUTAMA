@@ -6,7 +6,7 @@
 @section('content')
     <div class="mb-3">
         {{-- <button class="btn btn-primary">Tambah</button> --}}
-        <a type="Button" class="btn btn-primary btn-sm" href="{{ url('/createportofolio') }}">Tambah</a>
+        <a type="Button" class="btn btn-primary btn-sm" href="{{ url('/portofolio/create') }}">Tambah</a>
 
     </div>
     <div class="col-md">

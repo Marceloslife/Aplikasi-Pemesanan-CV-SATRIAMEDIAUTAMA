@@ -11,7 +11,7 @@ class Orders extends Model
     protected $table = 'orders';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'id','created_at','update_at', 'nama_event','penyelenggara', 'tgl_dari', 'tgl_sampai','lokasi_event', 'no_hp_penyelenggara','email_penyelenggara','status','layanan_id'
+        'id','created_at','update_at', 'nama_event','penyelenggara', 'tgl_dari', 'tgl_sampai','lokasi_event', 'no_hp_penyelenggara','email_penyelenggara','status','layanan_id','user_id','deskripsi'
     ];
     public function layanans()
     {
