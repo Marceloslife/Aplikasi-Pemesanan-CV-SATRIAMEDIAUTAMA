@@ -4,9 +4,9 @@
     <title>CV SATRIA MEDIA UTAMA</title>
 </head>
 <body>
-    <h1>{{ $mailData['title'] }}</h1>
+    {{-- <h1>{{ $mailData['title'] }}</h1>
     <p>{{ $mailData['body'] }}</p>
-  
+   --}}
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

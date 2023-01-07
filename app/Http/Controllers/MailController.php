@@ -20,7 +20,7 @@ class MailController extends Controller
         ];
          
         Mail::to('amazonamarcelo@mhs.mdp.ac.id')->send(new DemoMail($mailData));
-           
+           return'<h1>sukses</h1>';
     }
     
 }
