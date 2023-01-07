@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Layanans;
 use App\Models\Orders;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
+    use AuthorizesRequests;
     /**
      * Display a listing of the resource.
      *
@@ -17,11 +19,18 @@ class OrderController extends Controller
     public function index()
     {
         //
+        // $this->authorize('viewAny', Orders::class);
+        $orders = Orders::with('layanans')->where('user_id', Auth::user()->id)->get();
+        return view('order.table', compact('orders'));
+    }
+
+    public function adminview(){
+        $this->authorize('adminview', Orders::class);
         $orders = Orders::with('layanans')->get();
         return view('order.table', compact('orders'));
-        
-        
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -31,6 +40,7 @@ class OrderController extends Controller
     public function create()
     {
         //
+        // $this->authorize('create', Orders::class);
         $layanans = Layanans::all();
         return view('order.create',['data' => $layanans]);
     }
@@ -44,7 +54,7 @@ class OrderController extends Controller
     public function store(Request $request, Orders $orders)
     {
         //
-       
+        // $this->authorize('create', Orders::class);
         $data = $request->all();
         // // dd($data);
          
@@ -78,6 +88,8 @@ class OrderController extends Controller
             'lokasi_event' => $request->lokasi_event,
             'no_hp_penyelenggara' => $request->no_hp_penyelenggara,
             'email_penyelenggara' => $request->email_penyelenggara,
+            'user_id' => $request->user_id,
+            'deskripsi' => $request->deskripsi
             // 'status' => "pe rmintaan Baru",
 
             // 'layanan_id' => $arrtostr
@@ -85,7 +97,7 @@ class OrderController extends Controller
 
         $orders->layanans()->attach($request->layanan);
          $orders->save();
-        return redirect('tabelorder');
+        return redirect('order');
     }
 
     /**
@@ -97,7 +109,9 @@ class OrderController extends Controller
     public function show(Orders $order)
     {
         //
-        $layanans = Layanans::where('id', $order->id)->get();
+        // $layanans = Layanans::where('id', $order->id)->get();
+        $layanans = Orders::with('layanans')->where('id', $order->id)->get();
+        // dd($layanans);
         return view('order.show')->with('orders', $order)->with('layanans', $layanans);
 
     }
@@ -111,7 +125,8 @@ class OrderController extends Controller
     public function edit(Orders $order)
     {
         //
-         $layanans = Layanans::where('id', $order->id)->get();
+        $this->authorize('statusorder', Orders::class);
+        $layanans = Layanans::where('id', $order->id)->get();
         return view('order.show')->with('orders', $order)->with('layanans', $layanans);
     }
 
@@ -125,6 +140,7 @@ class OrderController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $this->authorize('update', Orders::class);
         $data = $request->all();
         // dd($data);
         $simpan = Orders::find($id);
@@ -155,21 +171,21 @@ class OrderController extends Controller
 
     }
      public function approved($id){
-        $data = Layanans::find($id);
+        $data = Orders::find($id);
         $data->status = "Disetujui";
 
         $data->save();
 
-        return redirect()->route('order.table')->with('success', 'Order disetujui');
+        return redirect()->route('adminvieworder')->with('success', 'Order disetujui');
     }
 
     public function canceled($id){
-        $data = Layanans::find($id);
+        $data = Orders::find($id);
         $data->status = "Ditolak";
 
         $data->save();
 
-        return redirect()->route('order.table')->with('error', 'Order ditolak');
+        return redirect()->route('adminvieworder')->with('error', 'Order ditolak');
     }
 
     // public function download(Request $request, $file){

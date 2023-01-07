@@ -58,6 +58,17 @@
                                     name="alamat" placeholder="Masukkan alamat_anggota">
                             </div>
                             <div class="form-group">
+                                <a href="{{ asset('storage/dokumen/' . $anggota->foto) }}" target="_blank">Preview
+                                    Foto</a>
+                            </div>
+                            <div class="form-group">
+                                <label for="foto">Upload Foto Baru</label>
+                                <br>
+
+                                <input type="hidden" name="old_file" value="{{ $anggota->foto }}">
+                                <input type="file" name="foto">
+                            </div>
+                            <div class="form-group">
                                 <label>divisi</label>
                                 <select class="form-control" name="divisi_id">
                                     {{-- <option value="">Pilih divisi</option> --}}

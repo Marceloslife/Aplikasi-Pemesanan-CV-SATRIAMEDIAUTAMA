@@ -16,9 +16,10 @@ class TabelanggotaController extends Controller
     public function index()
     {
         //
-        $anggota = Anggotas::all();
-        $data = compact('anggota');
-        return view('anggota.table', $data);
+        // $this->authorize('adminview', Anggotas::class);
+        // $anggota = Anggotas::all();
+        // $data = compact('anggota');
+        // return view('anggota.table', $data);
     }
 
     /**

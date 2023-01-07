@@ -14,77 +14,70 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form action="{{ url('order/' . $orders->id) }}" method="POST" enctype="multipart/form-data">
-                        @method('PATCH')
-                        @csrf
-                        <div class="card-body">
-                            <table>
-                                <tbody class="table nowrap table-responsive" style="width:100%">
-                                    <tr>
-                                        {{-- @php
+                    <div class="card-body" style="overflow-y: hidden">
+                        <table class="table nowrap table-responsive" style="width:100%">
+                            <tbody>
+                                <tr>
+                                    {{-- @php
                                         dd($orders);
                                     @endphp --}}
-                                        <td> Nama Event</td>
-                                        <td>{{ $orders->nama_event }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Penyelenggara</td>
-                                        <td>{{ $orders->penyelenggara }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tanggal Dari</td>
-                                        <td>{{ $orders->tgl_dari }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tanggal Sampai</td>
-                                        <td>{{ $orders->tgl_sampai }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lokasi Event</td>
-                                        <td>{{ $orders->lokasi_event }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>No Hp Penyelenggara</td>
-                                        <td>{{ $orders->no_hp_penyelenggara }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email Penyelenggara</td>
-                                        <td>{{ $orders->email_penyelenggara }}</td>
-                                    </tr>
-                                    <tr>
+                                    <td> Nama Event</td>
+                                    <td>{{ $orders->nama_event }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Penyelenggara</td>
+                                    <td>{{ $orders->penyelenggara }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Tanggal Dari</td>
+                                    <td>{{ $orders->tgl_dari }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Tanggal Sampai</td>
+                                    <td>{{ $orders->tgl_sampai }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Lokasi Event</td>
+                                    <td>{{ $orders->lokasi_event }}</td>
+                                </tr>
+                                <tr>
+                                    <td>No Hp Penyelenggara</td>
+                                    <td>{{ $orders->no_hp_penyelenggara }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Email Penyelenggara</td>
+                                    <td>{{ $orders->email_penyelenggara }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Layanan</td>
+                                    <td>
+                                        {{-- @php
+                                            dd($layanans);
+                                        @endphp --}}
+                                        @foreach ($layanans as $layanan)
+                                            @foreach ($layanan->layanans as $item)
+                                                <li> {{ $item->nama_layanan }} </li>
+                                            @endforeach
+                                        @endforeach
+                                    </td>
+                                </tr>
+                                <tr>
+                                    @can('adminview', $orders)
                                         <td>Status</td>
                                         <td>
-                                            <select require name="status" class="form-control simpleselect" id="list"
-                                                onchange="toggle(this.value)">
-                                                @if ($orders->status == '1')
-                                                    {
-                                                    <option value="1" class="bold">Permintaan Dikirim</option>
-                                                    }
-                                                @elseif ($orders->status == '2')
-                                                    {
-                                                    <option value="2" class="bold text-danger">Diterima</option>
-                                                    }
-                                                @elseif ($orders->status == '3')
-                                                    {
-                                                    <option value="3" class="bold text-danger">Ditolak</option>
-                                                    }
-                                                @endif
-
-                                                <option value="Permintaan Dikirim">Permintaan Dikirim</option>
-                                                <option value="Diterima">Diterima</option>
-                                                <option value="Ditolak">Ditolak</option>
-                                            </select>
+                                            <a class="btn btn-sm" href="{{ url('approved/' . $orders->id) }}">Diterima</a>
+                                            <a class="btn btn-sm" href="{{ url('canceled/' . $orders->id) }}">Ditolak</a>
                                         </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-secondary">Submit</button>
-                        </div>
-                    </form>
+                                    @endcan
+                                </tr>
+                                <tr>
+                                    <td>deskripsi</td>
+                                    <td>{{ $orders->deskripsi }}</td>
+                                </tr>
+                                <tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <!-- /.card -->
 

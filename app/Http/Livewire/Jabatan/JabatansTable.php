@@ -3,12 +3,15 @@
 namespace App\Http\Livewire\Jabatan;
 
 use App\Models\Jabatans;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Livewire\Component;
 use Livewire\WithPagination;
 
 class JabatansTable extends Component
 {
-   use WithPagination;
+    use WithPagination;
+    use AuthorizesRequests;
+
     protected $paginationTheme = 'bootstrap';
 
     public $jabatan_id;
@@ -19,6 +22,7 @@ class JabatansTable extends Component
 
     public function render()
     {
+        $this->authorize('adminview', Jabatans::class);
         return view('livewire.jabatan.jabatans-table',[
             'jabatans' => Jabatans::orderBy('id', 'desc')->paginate(5)
         ]);
@@ -26,12 +30,14 @@ class JabatansTable extends Component
 
     public function jabatanEdit($jabatan)
     {
+        $this->authorize('adminview', Jabatans::class);
         $this->jabatan_id = $jabatan['id'];
         $this->nama_jabatan = $jabatan['nama_jabatan'];
     }
 
     public function jabatanUpdate()
     {
+        $this->authorize('adminview', Jabatans::class);
         $this->validate([
             'nama_jabatan' => 'required',
         ]);
@@ -48,6 +54,7 @@ class JabatansTable extends Component
 
     public function jabatanDelete($id)
     {
+        $this->authorize('adminview', Jabatans::class);
         $this->jabatan_id = $id;
         
         $jabatan = Jabatans::find($id);
@@ -56,6 +63,7 @@ class JabatansTable extends Component
 
     public function jabatanDestroyer()
     {
+        $this->authorize('adminview', Jabatans::class);
         Jabatans::find($this->jabatan_id)->delete();
     }
 }

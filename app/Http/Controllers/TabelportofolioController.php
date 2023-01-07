@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Portofolio;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
 class TabelportofolioController extends Controller
 {
+    use AuthorizesRequests;
     /**
      * Display a listing of the resource.
      *
@@ -16,6 +18,7 @@ class TabelportofolioController extends Controller
     public function index()
     {
         //
+        $this->authorize('adminview', Anggotas::class);
         $portofolio = Portofolio::all();
         return view('portofolio.PortofolioTable', compact('portofolio'));
     }

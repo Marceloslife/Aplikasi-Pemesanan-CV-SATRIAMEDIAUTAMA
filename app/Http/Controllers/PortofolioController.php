@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Portofolio;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
 class PortofolioController extends Controller
 {
+    use AuthorizesRequests;
     /**
      * Display a listing of the resource.
      *
@@ -29,6 +31,7 @@ class PortofolioController extends Controller
     public function create()
     {
         //
+        $this->authorize('adminview', Portofolio::class);
         return view('portofolio.create');
     }
 
@@ -41,6 +44,7 @@ class PortofolioController extends Controller
     public function store(Request $request)
     {
         //
+        $this->authorize('adminview', Portofolio::class);
         $data = $request->all();
         // dd($data);
         $ext = $request->foto->getClientOriginalExtension(); 
@@ -81,6 +85,7 @@ class PortofolioController extends Controller
     public function edit($id)
     {
         //
+        $this->authorize('adminview', Portofolio::class);
         $portofolio = Portofolio::find($id);
         return view('portofolio.edit')->with('portofolio', $portofolio);
     }
@@ -95,6 +100,7 @@ class PortofolioController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $this->authorize('adminview', Portofolio::class);
         $data = $request->all();
         // dd($data);
         
@@ -132,6 +138,7 @@ class PortofolioController extends Controller
     public function destroy($id)
     {
         //
+        $this->authorize('adminview', Portofolio::class);
         portofolio::find($id)->delete();
         return redirect()->back();
     }

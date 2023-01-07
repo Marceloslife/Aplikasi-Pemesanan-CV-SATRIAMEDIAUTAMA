@@ -3,12 +3,14 @@
 namespace App\Http\Livewire\Divises;
 
 use App\Models\Divisis;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Livewire\Component;
 use Livewire\WithPagination;
 
 class DivisiTable extends Component
 {
     use WithPagination;
+    use AuthorizesRequests;
     protected $paginationTheme = 'bootstrap';
 
     public $divisi_id;
@@ -19,6 +21,7 @@ class DivisiTable extends Component
 
     public function render()
     {
+        $this->authorize('adminview', Divisis::class);
         return view('livewire.divises.divisi-table',[
             'divisis' => Divisis::orderBy('id', 'desc')->paginate(5)
         ]);
@@ -26,12 +29,14 @@ class DivisiTable extends Component
 
     public function divisiEdit($divisi)
     {
+        $this->authorize('adminview', Divisis::class);
         $this->divisi_id = $divisi['id'];
         $this->nama_divisi = $divisi['nama_divisi'];
     }
 
     public function divisiUpdate()
     {
+        $this->authorize('adminview', Divisis::class);
         $this->validate([
             'nama_divisi' => 'required',
         ]);
@@ -48,6 +53,7 @@ class DivisiTable extends Component
 
     public function divisiDelete($id)
     {
+        $this->authorize('adminview', Divisis::class);
         $this->divisi_id = $id;
         
         $divisi = Divisis::find($id);
@@ -56,6 +62,7 @@ class DivisiTable extends Component
 
     public function divisiDestroyer()
     {
+        $this->authorize('adminview', Divisis::class);
         Divisis::find($this->divisi_id)->delete();
     }
 }

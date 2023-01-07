@@ -3,10 +3,12 @@
 namespace App\Http\Livewire\Divises;
 
 use App\Models\Divisis;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Livewire\Component;
 
 class DivisiForm extends Component
 {
+    use AuthorizesRequests;
     public $divisi_id;
     public $nama_divisi;
     public function render()
@@ -15,6 +17,7 @@ class DivisiForm extends Component
     }
     public function store()
     {
+        $this->authorize('adminview', Divisis::class);
         $this->validate([
             'nama_divisi' => 'required',
         ]);

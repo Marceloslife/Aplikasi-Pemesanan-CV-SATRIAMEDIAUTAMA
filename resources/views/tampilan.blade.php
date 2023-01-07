@@ -1,11 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-<link
-  href="tampilan.css"
-  rel="stylesheet"
-/>
-<link rel="stylesheet" href="tampilan.css"/>
+    <link href="tampilan.css" rel="stylesheet" />
+    <link rel="stylesheet" href="tampilan.css" />
     <section class="u-clearfix u-image u-section-1" id="carousel_4545" data-image-width="1980" data-image-height="1100">
         <div class="u-clearfix u-sheet u-sheet-1">
             <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
@@ -111,7 +108,7 @@
                         data-animation-name="bounceIn" data-animation-duration="1000" data-animation-delay="0"
                         data-animation-direction="">
                         <div class="u-container-layout u-container-layout-4">
-                            <a href="http://127.0.0.1:8000/event">
+                            <a href="/portofoliopage">
                                 <center><img
                                         class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4"
                                         src="images/EVENT 1.png" alt="" data-image-width="64"
@@ -130,9 +127,10 @@
             <div class="u-container-style u-custom-color-1 u-group u-shape-rectangle u-group-1"
                 data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="">
                 <div class="u-container-layout u-container-layout-2">
-                    
-                    <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2"
-                        src="images/icons8-crew-64.png" alt="" data-image-width="64" data-image-height="64">
+                    <a href="/listcrew">
+                        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2"
+                            src="images/icons8-crew-64.png" alt="" data-image-width="64" data-image-height="64">
+                    </a>
                     <h3 class="u-text u-text-default u-text-2" data-animation-name="customAnimationIn"
                         data-animation-duration="1000">CREW</h3>
                 </div>
@@ -140,9 +138,11 @@
             <div class="u-container-style u-group u-palette-1-base u-shape-rectangle u-group-2"
                 data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="">
                 <div class="u-container-layout u-container-layout-3">
-                    <img class="u-image u-image-default u-preserve-proportions u-image-3"
-                        src="images/icons8-purchase-order-16.png" alt="" data-image-width="16"
-                        data-image-height="16">
+                    <a href="/order">
+                        <img class="u-image u-image-default u-preserve-proportions u-image-3"
+                            src="images/icons8-purchase-order-16.png" alt="" data-image-width="16"
+                            data-image-height="16">
+                    </a>
                     <h3 class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn"
                         data-animation-duration="1000" data-animation-direction="">ORDER</h3>
                 </div>
@@ -175,7 +175,8 @@
                                         data-image-width="317" data-image-height="245" data-animation-name="fadeIn"
                                         data-animation-duration="2000" data-animation-direction="Left"> --}}
                                     <video class="u-expanded-width u-image u-image-1" autoplay loop muted>
-                                        <source src="{{ url('Video/Video.mp4') }}" type="video/mp4" />
+                                        <source src="{{ asset('/storage/dokumen/' . $event->link_teaser_event) }}"
+                                            type="video/mp4" />
                                     </video>
                                     <h2 class="u-text u-text-1" data-animation-name="fadeIn"
                                         data-animation-duration="1750" data-animation-direction="Left">
@@ -201,14 +202,14 @@
                                                     <button type="button" class="btn-close" data-mdb-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
-                                                <div class="modal-body">NAMA KEGIATAN : Anniversary CV.
-                                                    Satria
-                                                    media
-                                                    utama">
-
-                                                    <p>Tanggal Kegiatan : 24 September 2021 </p>
-                                                    <p>Link Acara :</p> <a
-                                                        href="https://www.instagram.com/satriamediautama_eo/">Click
+                                                <div class="modal-body">
+                                                    <h2>{{ $event->nama_event }}</h2>
+                                                    <img width="400em"
+                                                        src="{{ asset('/storage/dokumen/' . $event->poster_event) }}"
+                                                        alt="">
+                                                    <p>{{ $event->tanggaltempat }}</p>
+                                                    <p>{{ $event->deskripsi_event }}</p>
+                                                    <p>Link Acara :</p> <a href="{{ $event->link_acara }}">Click
                                                         Here</a>
                                                 </div>
                                                 <div class="modal-footer">
@@ -310,94 +311,111 @@
         </div>
     </section>
     <section class="u-align-center u-clearfix u-palette-2-base u-section-5" id="carousel_3a6f">
-        
+
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
             <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
                 <div class="u-layout">
                     <div class="u-layout-col">
                         <div class="u-align-center u-container-style u-layout-cell u-size-30 u-white u-layout-cell-1">
-<div class="container">
-   <div class="container-fluid px-5 my-5">
-  <div class="row justify-content-center">
-    <div class="col-xl-10">
-      <div class="card border-0 rounded-3 shadow-lg overflow-hidden">
-        <div class="card-body p-0">
-          <div class="row g-0">
-            <div class="col-sm-6 d-none d-sm-block bg-image"></div>
-            <div class="col-sm-6 p-4">
-              <div class="text-center">
-                <div class="h3 fw-light">Contact Form</div>
-                <p class="mb-4 text-muted">Split layout contact form</p>
-              </div>
+                            <div class="container">
+                                <div class="container-fluid px-5 my-5">
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-10">
+                                            <div class="card border-0 rounded-3 shadow-lg overflow-hidden">
+                                                <div class="card-body p-0">
+                                                    <div class="row g-0">
+                                                        <div class="col-sm-6 d-none d-sm-block bg-image"></div>
+                                                        <div class="col-sm-6 p-4">
+                                                            <div class="text-center">
+                                                                <div class="h3 fw-light">Contact Form</div>
+                                                                <p class="mb-4 text-muted">Split layout contact form</p>
+                                                            </div>
 
-              <!-- * * * * * * * * * * * * * *
-          // * * SB Forms Contact Form * *
-          // * * * * * * * * * * * * * * *
+                                                            <!-- * * * * * * * * * * * * * *
+                                                                                                                                                          // * * SB Forms Contact Form * *
+                                                                                                                                                          // * * * * * * * * * * * * * * *
 
-          // This form is pre-integrated with SB Forms.
-          // To make this form functional, sign up at
-          // https://startbootstrap.com/solution/contact-forms
-          // to get an API token!
-          -->
+                                                                                                                                                          // This form is pre-integrated with SB Forms.
+                                                                                                                                                          // To make this form functional, sign up at
+                                                                                                                                                          // https://startbootstrap.com/solution/contact-forms
+                                                                                                                                                          // to get an API token!
+                                                                                                                                                          -->
 
-              <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                                            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
 
-                <!-- Name Input -->
-                <div class="form-floating mb-3">
-                  <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
-                  <label for="name">Name</label>
-                  <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
-                </div>
+                                                                <!-- Name Input -->
+                                                                <div class="form-floating mb-3">
+                                                                    <input class="form-control" id="name"
+                                                                        type="text" placeholder="Name"
+                                                                        data-sb-validations="required" />
+                                                                    <label for="name">Name</label>
+                                                                    <div class="invalid-feedback"
+                                                                        data-sb-feedback="name:required">Name is required.
+                                                                    </div>
+                                                                </div>
 
-                <!-- Email Input -->
-                <div class="form-floating mb-3">
-                  <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
-                  <label for="emailAddress">Email Address</label>
-                  <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                  <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
-                </div>
+                                                                <!-- Email Input -->
+                                                                <div class="form-floating mb-3">
+                                                                    <input class="form-control" id="emailAddress"
+                                                                        type="email" placeholder="Email Address"
+                                                                        data-sb-validations="required,email" />
+                                                                    <label for="emailAddress">Email Address</label>
+                                                                    <div class="invalid-feedback"
+                                                                        data-sb-feedback="emailAddress:required">Email
+                                                                        Address is required.</div>
+                                                                    <div class="invalid-feedback"
+                                                                        data-sb-feedback="emailAddress:email">Email Address
+                                                                        Email is not valid.</div>
+                                                                </div>
 
-                <!-- Message Input -->
-                <div class="form-floating mb-3">
-                  <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
-                  <label for="message">Message</label>
-                  <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
-                </div>
+                                                                <!-- Message Input -->
+                                                                <div class="form-floating mb-3">
+                                                                    <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;"
+                                                                        data-sb-validations="required"></textarea>
+                                                                    <label for="message">Message</label>
+                                                                    <div class="invalid-feedback"
+                                                                        data-sb-feedback="message:required">Message is
+                                                                        required.</div>
+                                                                </div>
 
-                <!-- Submit success message -->
-                <div class="d-none" id="submitSuccessMessage">
-                  <div class="text-center mb-3">
-                    <div class="fw-bolder">Form submission successful!</div>
-                    <p>To activate this form, sign up at</p>
-                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                  </div>
-                </div>
+                                                                <!-- Submit success message -->
+                                                                <div class="d-none" id="submitSuccessMessage">
+                                                                    <div class="text-center mb-3">
+                                                                        <div class="fw-bolder">Form submission successful!
+                                                                        </div>
+                                                                        <p>To activate this form, sign up at</p>
+                                                                        <a
+                                                                            href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                                                    </div>
+                                                                </div>
 
-                <!-- Submit error message -->
-                <div class="d-none" id="submitErrorMessage">
-                  <div class="text-center text-danger mb-3">Error sending message!</div>
-                </div>
+                                                                <!-- Submit error message -->
+                                                                <div class="d-none" id="submitErrorMessage">
+                                                                    <div class="text-center text-danger mb-3">Error sending
+                                                                        message!</div>
+                                                                </div>
 
-                <!-- Submit button -->
-                <div class="d-grid">
-                  <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
-                </div>
-              </form>
-              <!-- End of contact form -->
+                                                                <!-- Submit button -->
+                                                                <div class="d-grid">
+                                                                    <button class="btn btn-primary btn-lg disabled"
+                                                                        id="submitButton" type="submit">Submit</button>
+                                                                </div>
+                                                            </form>
+                                                            <!-- End of contact form -->
 
-            </div>
-          </div>
+                                                        </div>
+                                                    </div>
 
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-<!-- CDN Link to SB Forms Scripts -->
-<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+                                <!-- CDN Link to SB Forms Scripts -->
+                                <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
-                                       {{-- <form
+                                {{-- <form
   action="https://formspree.io/f/mqkjvdjk"
   method="POST"
 >
@@ -416,12 +434,12 @@
                                         <input type="hidden" value="" name="recaptchaResponse">
                                         <input type="hidden" name="formServices" value="">
                                     </form> --}}
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 @endsection

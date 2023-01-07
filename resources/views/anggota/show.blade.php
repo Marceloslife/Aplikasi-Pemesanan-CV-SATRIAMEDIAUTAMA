@@ -37,7 +37,7 @@
                 <br>
                 <div class="row">
                     <div class="col-3">
-                        <label>jenis_kelamin</label>
+                        <label>Jenis Kelamin</label>
                     </div>
                     <div class="col-8">
                         {{ $item->jenis_kelamin }}
@@ -46,7 +46,7 @@
                 <br>
                 <div class="row">
                     <div class="col-3">
-                        <label>tanggal_lahir</label>
+                        <label>Tanggal Lahir</label>
                     </div>
                     <div class="col-8">
                         {{ $item->tanggal_lahir }}
@@ -55,7 +55,7 @@
                 <br>
                 <div class="row">
                     <div class="col-3">
-                        <label>status</label>
+                        <label>Status</label>
                     </div>
                     <div class="col-8">
                         {{ $item->status }}
@@ -64,16 +64,27 @@
                 <br>
                 <div class="row">
                     <div class="col-3">
-                        <label>alamat</label>
+                        <label>Alamat</label>
                     </div>
+                    <br>
                     <div class="col-8">
                         {{ $item->alamat }}
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label>Foto Portofolio</label>
+                    </div>
+                    <br>
+                    <div class="col-8">
+                        <img width="100px" src="{{ asset('/storage/dokumen/' . $item->foto) }}" alt="">
+                    </div>
+                </div>
+
                 <br>
                 <div class="row">
                     <div class="col-3">
-                        <label>divises_id</label>
+                        <label>Divisi</label>
                     </div>
                     <div class="col-8">
                         {{ $item->divises->nama_divisi }}
@@ -82,7 +93,7 @@
                 <br>
                 <div class="row">
                     <div class="col-3">
-                        <label>jabatans_id</label>
+                        <label>Jabatans</label>
                     </div>
                     <div class="col-8">
                         {{ $item->jabatans->nama_jabatan }}
@@ -91,7 +102,7 @@
                 <br>
                 <div class="row">
                     <div class="col-3">
-                        <label>nik</label>
+                        <label>NIK</label>
                     </div>
                     <div class="col-8">
                         {{ $item->nik }}
@@ -100,7 +111,7 @@
                 <br>
                 <div class="row">
                     <div class="col-3">
-                        <label>no_karyawan</label>
+                        <label>No Karyawan</label>
                     </div>
                     <div class="col-8">
                         {{ $item->no_karyawan }}
@@ -109,7 +120,7 @@
                 <br>
                 <div class="row">
                     <div class="col-3">
-                        <label>tanggal bergabung</label>
+                        <label>Tanggal Bergabung</label>
                     </div>
                     <div class="col-8">
                         {{ $item->tanggal_bergabung }}
@@ -118,7 +129,7 @@
                 <br>
                 <div class="row">
                     <div class="col-3">
-                        <label>link_instagram</label>
+                        <label>Link Instagram</label>
                     </div>
                     <div class="col-8">
                         <a href="{{ $item->link_instagram }}" target="_blank">{{ $item->link_instagram }}</a>

@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
 class EventController extends Controller
 {
+    use AuthorizesRequests;   
+
     /**
      * Display a listing of the resource.
      *
@@ -16,6 +19,7 @@ class EventController extends Controller
     public function index()
     {
         //
+        $this->authorize('adminview', Event::class);
         $event = Event::all();
         return view('event.table', compact('event'));
         
@@ -29,6 +33,7 @@ class EventController extends Controller
     public function create()
     {
         //
+        $this->authorize('adminview', Event::class);
         return view('event.create');
         
     }
@@ -42,6 +47,7 @@ class EventController extends Controller
     public function store(Request $request)
     {
         //
+        $this->authorize('adminview', Event::class);
         $data = $request->all();
 
         // dd($data);
@@ -87,6 +93,7 @@ class EventController extends Controller
     public function edit($id)
     {
         //
+        $this->authorize('adminview', Event::class);
         $event = Event::find($id);
         return view('event.edit')->with('event', $event);
     }
@@ -101,6 +108,7 @@ class EventController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $this->authorize('adminview', Event::class);
         $data = $request->all();
 
         $simpan = Event::find($id);
@@ -158,6 +166,7 @@ class EventController extends Controller
     public function destroy($id)
     {
         //
+        $this->authorize('adminview', Event::class);
         Event::find($id)->delete();
         return redirect()->back();
     }

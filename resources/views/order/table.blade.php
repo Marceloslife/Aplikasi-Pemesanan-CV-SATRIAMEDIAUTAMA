@@ -16,13 +16,14 @@
             <thead class="thead-dark">
                 <th>No</th>
                 <th>Nama Event</th>
-                <th>Penyelenggara</th>
+                {{-- <th>Layanan</th> --}}
+                {{-- <th>Penyelenggara</th>
                 <th>Tanggal Waktu Event dari</th>
                 <th>Tanggal Waktu Event sampai</th>
                 <th>Lokasi Event</th>
                 <th>No HP Penyelenggara</th>
                 <th>Email Penyelenggara</th>
-                <th>Layanan</th>
+                <th>Layanan</th> --}}
                 <th>Status</th>
                 <th>Action</th>
             </thead>
@@ -31,16 +32,13 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $item->nama_event }}</td>
-                        <td>{{ $item->penyelenggara }}</td>
+                        {{-- <td>{{ $item->penyelenggara }}</td>
                         <td>{{ $item->tgl_dari }}</td>
                         <td>{{ $item->tgl_sampai }}</td>
                         <td>{{ $item->lokasi_event }}</td>
                         <td>{{ $item->no_hp_penyelenggara }}</td>
-                        <td>{{ $item->email_penyelenggara }}</td>
-                        <td>
-                            {{-- @php
-                                dd($orders[0]->layanans[0]->pivot->orders_id);
-                            @endphp --}}
+                        <td>{{ $item->email_penyelenggara }}</td> --}}
+                        {{-- <td>
                             <ul>
                                 @foreach ($orders as $order)
                                     @foreach ($order->layanans as $layanan)
@@ -50,7 +48,7 @@
                                     @endforeach
                                 @endforeach
                             </ul>
-                        </td>
+                        </td> --}}
                         <td><span class="badge bg-dark">{{ $item->status }}</span></td>
 
                         <td>
@@ -58,13 +56,13 @@
 
                                 {{-- <a href="" class="btn btn-warning mx-1">Status</a> --}}
                                 <a type="button" class="btn btn-warning mx-1"
-                                    href="{{ url('order/' . $item->id . '/edit') }}">Detail</a>
-                                <form action="{{ url('order/' . $item->id) }}" method="POST">
+                                    href="{{ url('order/' . $item->id) }}">Detail</a>
+                                {{-- <form action="{{ url('order/' . $item->id) }}" method="POST">
                                     @csrf
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button class="btn btn-danger mx-1 "
                                         onclick="return confirm('Apakah anda yakin untuk menghapus Data ini?')">Delete</button>
-                                </form>
+                                </form> --}}
                             </div>
                         </td>
                     </tr>
