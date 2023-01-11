@@ -16,8 +16,8 @@
                     <td>
                         <button class="btn badge bg-warning" data-bs-toggle="modal" data-bs-target="#editModal"
                             wire:click="layananEdit({{ $item }})">Update</button>
-                        <button class="btn badge bg-danger"
-                            wire:click="layananDelete({{ $item->id }})">Delete</button>
+                        {{-- <button class="btn badge bg-danger"
+                            wire:click="layananDelete({{ $item->id }})">Delete</button> --}}
                     </td>
                 </tr>
             @endforeach
