@@ -52,7 +52,8 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => 'admin',
             'email' => 'm.irfan0205@gmail.com',
-            'password' => '$2y$10$4mWy9k6BtDZOxjH7lEg/yegsaEJHzNZw4YeOrbD0Ku8YiM7cywoM.'
+            'password' => '$2y$10$4mWy9k6BtDZOxjH7lEg/yegsaEJHzNZw4YeOrbD0Ku8YiM7cywoM.',
+            'level' => '2'
         ]);
     }
 }
