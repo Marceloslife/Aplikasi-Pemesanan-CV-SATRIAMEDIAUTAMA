@@ -8,6 +8,7 @@ use App\Models\anggotas;
 use App\Models\Divisis;
 use App\Models\Jabatans;
 use App\Models\Layanans;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -46,6 +47,12 @@ class DatabaseSeeder extends Seeder
         ]);
         Jabatans::create([
             'nama_jabatan' => 'Ketua Divisi'
+        ]);
+
+        User::create([
+            'name' => 'admin',
+            'email' => 'm.irfan0205@gmail.com',
+            'password' => '$2y$10$4mWy9k6BtDZOxjH7lEg/yegsaEJHzNZw4YeOrbD0Ku8YiM7cywoM.'
         ]);
     }
 }
