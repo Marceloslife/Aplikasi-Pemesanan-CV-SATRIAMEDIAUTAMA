@@ -8,7 +8,7 @@
     </div>
     <div class="container fluid ">
         <div class="row">
-            @foreach ($anggotas as $item)
+            @foreach ($anggota as $item)
                 <div class="col-md-4 mb-1">
                     <div class="bg-white p-3 text-center rounded box"><img class="img-responsive rounded-circle"
                             src="{{ asset('/storage/dokumen/' . $item->foto) }}" width="90">

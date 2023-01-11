@@ -13,7 +13,8 @@ class LandingPageController extends Controller
      public function index(){
         $event = Event::orderBy('id', 'desc')->first();
         $portofolio = Portofolio::latest()->limit(1)->get();
-        return view('tampilan')->with('event', $event)->with('portofolio', $portofolio);
+        $anggota = Anggotas::latest()->limit(12)->get();
+        return view('tampilan')->with('event', $event)->with('portofolio', $portofolio)->with('anggota', $anggota);
     }
 
     public function portofolio(){
@@ -23,7 +24,10 @@ class LandingPageController extends Controller
 
     public function anggota(){
         $anggota = Anggotas::orderBy('id', 'desc')->paginate(12);
-        return view('crew')->with('anggota', $anggota);
+        return view('crew2')->with('anggota', $anggota);
     }
+
+    
+
 
 }

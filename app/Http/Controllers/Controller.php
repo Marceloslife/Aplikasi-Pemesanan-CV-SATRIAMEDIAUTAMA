@@ -1,8 +1,5 @@
 <?php
-<<<<<<< HEAD
 
-=======
->>>>>>> email
 namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;

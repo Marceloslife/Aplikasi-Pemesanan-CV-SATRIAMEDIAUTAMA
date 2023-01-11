@@ -2,11 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AcceptMail;
+use App\Mail\DemoMail;
+use App\Mail\CancelMail;
+use App\Mail\NewOrderMail;
 use App\Models\Layanans;
 use App\Models\Orders;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\App;
 
 class OrderController extends Controller
 {
@@ -20,7 +27,9 @@ class OrderController extends Controller
     {
         //
         // $this->authorize('viewAny', Orders::class);
+        
         $orders = Orders::with('layanans')->where('user_id', Auth::user()->id)->get();
+        // dd($orders);
         return view('order.table', compact('orders'));
     }
 
@@ -94,9 +103,11 @@ class OrderController extends Controller
 
             // 'layanan_id' => $arrtostr
         ]);
-
+        $email = 'm.irfan0205@gmail.com';
         $orders->layanans()->attach($request->layanan);
          $orders->save();
+         Mail::to($email)->send(new NewOrderMail($email));
+        // return redirect()->route('order');
         return redirect('order');
     }
 
@@ -172,18 +183,23 @@ class OrderController extends Controller
     }
      public function approved($id){
         $data = Orders::find($id);
+        // $emailAccept = Orders::find($id);
         $data->status = "Disetujui";
 
         $data->save();
+        Mail::to($data['email_penyelenggara'])->send(new AcceptMail($data['email_penyelenggara']));
 
         return redirect()->route('adminvieworder')->with('success', 'Order disetujui');
     }
 
     public function canceled($id){
         $data = Orders::find($id);
+        // $emailCancel = Orders::find($id);
         $data->status = "Ditolak";
-
+        // dd($emailCancel['email_penyelenggara']);
+        
         $data->save();
+        Mail::to($data['email_penyelenggara'])->send(new CancelMail($data['email_penyelenggara']));
 
         return redirect()->route('adminvieworder')->with('error', 'Order ditolak');
     }

@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnggotaController;
-// use App\Http\Controllers\AnggotasController;
+use App\Http\Controllers\AnggotasController;
 use App\Http\Controllers\PortofolioController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\LandingPageController;
@@ -49,11 +49,11 @@ Route::resource('/', LandingPageController::class);
 Route::get('/portofoliopage',[LandingPageController::class, 'portofolio']);
 
 Route::get('/listcrew',[LandingPageController::class, 'anggota']);
+// Route::get('/listcrew',[LandingPageController::class, 'listanggota']);
 
 // Route::get('/listcrew',Function(){
-// return view('crew');
+// return view('crew2');
 // });
-
 // login only
 Route::middleware('auth')->group(function () {
     Route::get('/layout', function () {
@@ -80,9 +80,7 @@ Route::middleware('auth')->group(function () {
         return view('event');
     });
     
-    Route::get('/crew',Function(){
-        return view('crew');
-    });
+    
     
     Route::get('/order',Function(){
         return view('order');
@@ -112,6 +110,10 @@ Route::middleware('auth')->group(function () {
         return view('anggota.show');
     });
     Route::resource('/order', OrderController::class);
+
+    // Route::get('/orderview', function(){
+    //     return view('order.table');
+    // });
     
     Route::resource('/dashboard', TabelorderController::class)->middleware('auth');
 
@@ -127,18 +129,17 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('/user', UserController::class);
 
-<<<<<<< HEAD
-=======
-Route::get('/order',Function(){
-    return view('order');
-});
->>>>>>> email
+
+// Route::get('/order',function(){
+//     return view('order.table');
+// });
+
 
 Route::get('/Start',Function(){
     return view('Start');
 });
 
-<<<<<<< HEAD
+
 // Route::get('/dashboard', function () {
 //     return view('order.table');
 // })->middleware("auth");
@@ -147,8 +148,6 @@ require __DIR__.'/auth.php';
 
 Route::get('/approved/{id}', [OrderController::class,'approved']);
 Route::get('/canceled/{id}', [OrderController::class,'canceled']);
-=======
+
 Route::get('/send-mail', [MailController::class, 'index']);
 // Route::get('/',[sendMai::class,'tampilan']);
-
->>>>>>> email

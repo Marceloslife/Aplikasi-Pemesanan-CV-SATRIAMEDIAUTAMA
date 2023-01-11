@@ -18,12 +18,12 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="nama_event">nama Event</label>
+                                <label for="nama_event">Nama Event</label>
                                 <input type="text" class="form-control" id="nama_event" name="nama_event"
                                     placeholder="Masukkan nama Event" required>
                             </div>
                             <div class="form-group">
-                                <label for="penyelenggara">penyelenggara</label>
+                                <label for="penyelenggara">Penyelenggara</label>
                                 <input type="text" class="form-control" name="penyelenggara"
                                     placeholder="Masukkan Penyelenggara" required>
                             </div>
@@ -38,7 +38,7 @@
                                                 <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                                             </div>
                                             <input type="date" class="form-control" data-inputmask-alias="datetime"
-                                                data-inputmask-inputformat="mm/dd/yyyy" data-mask name="tgl_dari">
+                                                data-inputmask-inputformat="mm/dd/yyyy" data-mask name="tgl_dari" required>
                                         </div>
                                         <!-- /.input group -->
                                     </div>
@@ -52,14 +52,15 @@
                                                 <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                                             </div>
                                             <input type="date" class="form-control"
-                                                data-inputmask-inputformat="mm/dd/yyyy" data-mask name="tgl_sampai">
+                                                data-inputmask-inputformat="mm/dd/yyyy" data-mask name="tgl_sampai"
+                                                required>
                                         </div>
                                         <!-- /.input group -->
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="lokasi_event">lokasi Event</label>
+                                <label for="lokasi_event">Lokasi Event</label>
                                 <input type="text" class="form-control" id="lokasi_event" name="lokasi_event"
                                     placeholder="Masukkan lokasi Event" required>
                             </div>
@@ -71,13 +72,13 @@
                             <div class="form-group">
                                 <label for="email">Email Penyelenggara</label>
                                 <input type="email" class="form-control" id="email" name="email_penyelenggara"
-                                    placeholder="Enter email">
+                                    placeholder="Enter email" required>
                             </div>
                             <div class="row">
                                 <label for="name" class="form-label">Layanan</label>
-                                <select id="layanan" name="layanan[]" multiple>
+                                <select id="layanan" name="layanan[]" multiple required>
                                     @foreach ($data as $item)
-                                        <option value="{{ $item->id }}">{{ $item->nama_layanan }}</option>
+                                        <option value="{{ $item->id }}">{{ $item->nama_layanan }} </option>
                                     @endforeach
                                 </select>
                                 {{-- 
@@ -89,54 +90,13 @@
                                 </select> --}}
                             </div>
                             <div class="form-group">
-                                <label for="deskripsi">deskripsi</label>
+                                <label for="deskripsi">Deskripsi</label>
                                 <input type="text" class="form-control" name="deskripsi" placeholder="Masukkan deskripsi"
                                     required>
                                 <input type="text" class="form-control" name="user_id"
                                     value="{{ Auth::user()->id }}"style="display: none">
                             </div>
-                            {{-- <label for="">Deskripsi layanan</label>
-                            <input type="text" name="" id="">
-                            <input type="text" class="form-control" name="user_id" value="{{ Auth::user()->id }}"
-                                style="display: none"> --}}
-                            {{-- <div class="row">
-                                <label>Layanan</label>
-                             
-                                <div class="col-sm-2">
 
-                                    <div class="form-group clearfix">
-                                        <div class="icheck-primary d-inline">
-                                            <input type="checkbox" id="checkboxPrimary1" value="MC" name="layanan[]">
-                                            <label for="checkboxPrimary1">MC
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-
-                                    <div class="form-group clearfix">
-                                        <div class="icheck-primary d-inline">
-                                            <input type="checkbox" id="checkboxPrimary1" value="Tenda" name="layanan[]">
-                                            <label for="checkboxPrimary1">Tenda
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-
-                                    <div class="form-group clearfix">
-                                        <div class="icheck-primary d-inline">
-                                            <input type="checkbox" id="checkboxPrimary1" value="Event Organizer"
-                                                name="layanan[]">
-                                            <label for="checkboxPrimary1">Event Organizer
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                            </div> --}}
-
-                            <!-- /.card-body -->
 
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-secondary">Submit</button>
@@ -150,13 +110,5 @@
             </div>
             <!-- /.row -->
         </div><!-- /.container-fluid -->
-        <script>
-            function toggle(value) {
-                if (value == "MC") {
-                    console.log("SAYA");
-                } else {
-                    console.log("KNTL")
-                }
-            }
-        </script>
+
     @endsection

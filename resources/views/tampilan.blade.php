@@ -126,23 +126,14 @@
             </div>
             <div class="u-container-style u-custom-color-1 u-group u-shape-rectangle u-group-3"
                 data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="">
-<<<<<<< HEAD
-                <div class="u-container-layout u-container-layout-2">
-                    <a href="/listcrew">
-                        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2"
-                            src="images/icons8-crew-64.png" alt="" data-image-width="64" data-image-height="64">
-                    </a>
-                    <h3 class="u-text u-text-default u-text-2" data-animation-name="customAnimationIn"
-                        data-animation-duration="1000">CREW</h3>
-=======
                 <div class="u-container-layout u-container-layout-4">
-                    <a href="http://127.0.0.1:8000/crew"><img
+                    <a href="/listcrew"><img
                             class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4"
-                            src="images/crew.PNG" alt="" data-image-width="200"
-                            data-image-height="100"></a>
-                   <center> <h3 class="u-text u-text-default u-text-4" data-animation-name="customAnimationIn"
-                        data-animation-duration="1000">CREW</h3></center>
->>>>>>> email
+                            src="images/crew.PNG" alt="" data-image-width="200" data-image-height="100"></a>
+                    <center>
+                        <h3 class="u-text u-text-default u-text-4" data-animation-name="customAnimationIn"
+                            data-animation-duration="1000">CREW</h3>
+                    </center>
                 </div>
             </div>
             <div class="u-container-style u-group u-palette-1-base u-shape-rectangle u-group-2"
@@ -225,8 +216,7 @@
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
                                                         data-mdb-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save
-                                                        changes</button>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -281,6 +271,34 @@
                 </div>
             </div>
         </div>
+        {{-- <div class="container text-center mt-5 mb-2">
+
+            <h1 class="mb-0">TEAM SATRIA MEDIA UTAMA</h1><span>anggota team tahun 2022-2023</span>
+        </div>
+        <div class="container fluid ">
+            <div class="row">
+                @foreach ($anggota as $item)
+                    <div class="col-md-4 mb-1">
+                        <div class="bg-white p-3 text-center rounded box"><img class="img-responsive rounded-circle"
+                                src="{{ asset('/storage/dokumen/' . $item->foto) }}" width="90">
+                            <h5 class="mt-3 name">{{ $item->nama }}</h5><span class="work d-block">Divisi
+                                : {{ $item->divises->nama_divisi }}</span><span class="work d-block">Jabatan
+                                :
+                                {{ $item->jabatans->nama_jabatan }}</span><span class="work d-block">ID NO
+                                :
+                                {{ $item->no_karyawan }}</span>
+
+                            <div class="mt-4 about"><span>&nbsp; </span></div>
+                            <div class="mt-4">
+                                <a href="{{ $item->link_instagram }}" class="btn btn-info" role="button">Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+            </div>
+        </div>
+        &nbsp; --}}
 
     </section>
     <section class="u-clearfix u-section-4" id="carousel_5b20">
@@ -340,17 +358,6 @@
                                                                 <div class="h3 fw-light">Contact Form</div>
                                                                 <p class="mb-4 text-muted">Split layout contact form</p>
                                                             </div>
-
-                                                            <!-- * * * * * * * * * * * * * *
-                                                                                                                                                          // * * SB Forms Contact Form * *
-                                                                                                                                                          // * * * * * * * * * * * * * * *
-
-                                                                                                                                                          // This form is pre-integrated with SB Forms.
-                                                                                                                                                          // To make this form functional, sign up at
-                                                                                                                                                          // https://startbootstrap.com/solution/contact-forms
-                                                                                                                                                          // to get an API token!
-                                                                                                                                                          -->
-
                                                             <form id="contactForm" data-sb-form-api-token="API_TOKEN">
 
                                                                 <!-- Name Input -->
@@ -405,22 +412,19 @@
                                                                         message!</div>
                                                                 </div>
 
-<<<<<<< HEAD
-                                                                <!-- Submit button -->
+
                                                                 <div class="d-grid">
-                                                                    <button class="btn btn-primary btn-lg disabled"
-                                                                        id="submitButton" type="submit">Submit</button>
                                                                 </div>
                                                             </form>
                                                             <!-- End of contact form -->
-=======
-                <!-- Submit button -->
-                <div class="d-grid">
-                <button class="btn btn-primary">send</button>
-                </div>
-              </form>
-              <!-- End of contact form -->
->>>>>>> email
+
+                                                            <!-- Submit button -->
+                                                            <div class="d-grid">
+                                                                <button class="btn btn-primary">send</button>
+                                                            </div>
+                                                            </form>
+                                                            <!-- End of contact form -->
+
 
                                                         </div>
                                                     </div>

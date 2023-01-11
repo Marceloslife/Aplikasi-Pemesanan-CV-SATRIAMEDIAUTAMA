@@ -20,17 +20,17 @@
                             <div class="form-group">
                                 <label for="name">Nama</label>
                                 <input type="text" class="form-control" id="name" placeholder="Masukkan Nama"
-                                    name="nama">
+                                    name="nama" required>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1"
-                                    placeholder="Masukkan email" name="email_address">
+                                    placeholder="Masukkan email" name="email_address" required>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputNO.HP1">No.Hp</label>
                                 <input type="number" class="form-control" id="exampleInputNo.Hp1"
-                                    placeholder="Masukkan No.Hp" name="no_hp">
+                                    placeholder="Masukkan No.Hp" name="no_hp" required>
                             </div>
                             <!-- Date -->
                             <div class="col-md-3">
@@ -52,7 +52,7 @@
                                     <!-- select -->
                                     <div class="form-group">
                                         <label>Jenis Kelamin</label>
-                                        <select class="form-control" name="jenis_kelamin">
+                                        <select class="form-control" name="jenis_kelamin" required>
                                             <option value="L">Laki Laki</option>
                                             <option value="P">Perempuan</option>
                                         </select>
@@ -63,7 +63,7 @@
                             <div class="form-group">
                                 <label for="address">Alamat</label>
                                 <input type="text" class="form-control" name="alamat" id="address"
-                                    placeholder="Masukkan Alamat">
+                                    placeholder="Masukkan Alamat" required>
                             </div>
                             <div class="form-group">
                                 <label for="foto">Upload Foto</label>
@@ -73,11 +73,11 @@
                             <div class="form-group">
                                 <label for="link_instagram">Link Instagram</label>
                                 <input type="text" class="form-control" id="link_instagram"
-                                    placeholder="Masukkan link instagram" name="link_instagram">
+                                    placeholder="Masukkan link instagram" name="link_instagram" required>
                             </div>
                             <div class="form-group">
                                 <label>divisi</label>
-                                <select class="form-control" name="divisi_id">
+                                <select class="form-control" name="divisi_id" required>
                                     {{-- <option value="">Pilih divisi</option> --}}
                                     @foreach ($divises as $item)
                                         <option value="{{ $item->id }}">{{ $item->nama_divisi }}</option>
@@ -86,7 +86,7 @@
                             </div>
                             <div class="form-group">
                                 <label>jabatan</label>
-                                <select class="form-control" name="jabatan_id">
+                                <select class="form-control" name="jabatan_id" required>
                                     {{-- <option value="">Pilih jabatan</option> --}}
                                     @foreach ($jabatans as $item)
                                         <option value="{{ $item->id }}">{{ $item->nama_jabatan }}</option>
@@ -96,12 +96,12 @@
                             <div class="form-group">
                                 <label for="exampleInputNIK">NIK</label>
                                 <input type="number" class="form-control" name="nik" id="exampleInputNIK1"
-                                    placeholder="Masukkan NIK">
+                                    placeholder="Masukkan NIK" required>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputnoKaryawan">No Karyawan</label>
                                 <input type="number" class="form-control" name="no_karyawan" id="exampleInputnoKaryawan"
-                                    placeholder="Masukkan noKaryawan">
+                                    placeholder="Masukkan noKaryawan" required>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
@@ -112,7 +112,7 @@
                                             <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                                         </div>
                                         <input type="date" class="form-control" data-inputmask-inputformat="mm/dd/yyyy"
-                                            data-mask name="tanggal_bergabung">
+                                            data-mask name="tanggal_bergabung" required>
                                     </div>
                                     <!-- /.input group -->
                                 </div>

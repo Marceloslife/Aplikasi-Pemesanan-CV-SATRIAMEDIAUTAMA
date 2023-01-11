@@ -67,31 +67,32 @@
                             <ul class="u-nav u-spacing-2 u-unstyled u-nav-1">
                                 <li class="u-nav-item"><a
                                         class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white"
-                                        href="http://127.0.0.1:8000/order" style="padding: 10px 20px;">login</a>
+                                        href="http://127.0.0.1:8000/login" style="padding: 10px 20px;">login</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="u-custom-menu u-nav-container-collapse">
                             <div
                                 class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-                                <div class="u-inner-container-layout u-sidenav-overflow">
-                                    <div class="u-menu-close"></div>
+                                {{-- <div class="u-inner-container-layout u-sidenav-overflow"> --}}
+                                {{-- <div class="u-menu-close"></div>
                                     <a href="/http://127.0.0.1:8000/order">
                                         <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
                                             <li class="u-nav-item"><a class="u-button-style u-nav-link">login</a>
                                             </li>
                                         </ul>
-                                    </a>
-                                </div>
-                            </div>
+                                    </a> --}}
+                                {{-- </div> --}}
+                                {{-- </div>
                             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-                        </div>
+                        </div> --}}
                     </nav>
+                    <img class="u-hover-feature u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
+                        src="images/logo.png" alt="" data-image-width="100" data-image-height="100"
+                        data-animation-name="customAnimationIn" data-animation-duration="1000"
+                        data-animation-direction="Left">
                     <a href="/">
-                        <img class="u-hover-feature u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
-                            src="images/logo.png" alt="" data-image-width="1080" data-image-height="1080"
-                            data-animation-name="customAnimationIn" data-animation-duration="1000"
-                            data-animation-direction="Left">
+
                     </a>
                 </header>
                 <section class="u-clearfix u-image u-section-1" id="carousel_4545" data-image-width="1980"
