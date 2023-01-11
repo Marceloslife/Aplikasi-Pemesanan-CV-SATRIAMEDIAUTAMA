@@ -19,42 +19,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
-        // anggotas::create([
-        //     'nama'=>'irfan',
-        //     'email_address'=>'irfan@gmail.com',
-        //     'no_hp'=>'0812323456745',
-        //     'jenis_kelamin' => 'L',
-        //     'tanggal_lahir' => '2012-10-21',
-        //     'status' => 'aktif',
-        //     'alamat' => 'jl.rajawali',
-        //     'divises_id'=>'1',
-        //     'jabatans_id' => '1',
-        //     'nik' =>'201201020111010',
-        //     'no_karyawan' => '210121833210',
-        //     'tanggal_bergabung' => '2020-10-21',
-        // ]);
 
         Layanans::create([
-            'nama_layanan' => 'MC'
+            'nama_layanan' => 'SHOW MANAGEMENT'
         ]);
 
         Layanans::create([
-            'nama_layanan' => 'Panggung'
+            'nama_layanan' => '360 VIDEOBOOTH EXPERINCE'
+        ]);
+
+        Layanans::create([
+            'nama_layanan' => 'DEKORASI STAND & PRODUKSI'
+        ]);
+
+
+        Divisis::create([
+            'nama_divisi' => 'DEKORASI STAND & PRODUKSI'
         ]);
 
         Divisis::create([
-            'nama_divisi' => 'Acara'
-        ]);
-
-        Divisis::create([
-            'nama_divisi' => 'Multimedia'
+            'nama_divisi' => '360 VIDEOBOOTH EXPERINCE'
         ]);
         Jabatans::create([
             'nama_jabatan' => 'Anggota Divisi'
