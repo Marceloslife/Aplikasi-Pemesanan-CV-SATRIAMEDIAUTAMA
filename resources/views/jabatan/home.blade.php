@@ -45,7 +45,7 @@
                     @livewire('jabatan.jabatans-form')
                 </div>
                 <div class="card">
-                    <div class="card-header">jabatan</div>
+                    <div class="card-header">Jabatan</div>
                     <div class="card-body">
                         @livewire('jabatan.jabatans-table')
                     </div>

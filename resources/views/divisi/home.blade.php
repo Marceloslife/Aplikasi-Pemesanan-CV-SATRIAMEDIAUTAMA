@@ -11,7 +11,7 @@
         window.addEventListener('divisiDeleteConfirmation', event => {
             Swal.fire({
                 title: 'Apakah Kamu Yakin?',
-                text: "Kamu Akan Menghapus " + event.detail.divisi.nama + "!",
+                text: "Kamu Akan Menghapus " + event.detail.divisi.nama_divisi + "!",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -45,7 +45,7 @@
                     @livewire('divises.divisi-form')
                 </div>
                 <div class="card">
-                    <div class="card-header">divisi</div>
+                    <div class="card-header">Divisi</div>
                     <div class="card-body">
                         @livewire('divises.divisi-table')
                     </div>

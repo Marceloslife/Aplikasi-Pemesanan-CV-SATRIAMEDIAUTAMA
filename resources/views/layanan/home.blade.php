@@ -45,7 +45,7 @@
                     @livewire('layanan.layanans-form')
                 </div>
                 <div class="card">
-                    <div class="card-header">layanan</div>
+                    <div class="card-header">Layanan</div>
                     <div class="card-body">
                         @livewire('layanan.layanans-table')
                     </div>

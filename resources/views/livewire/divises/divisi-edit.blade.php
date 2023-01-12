@@ -11,7 +11,7 @@
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
-                            <label>Name_divisi</label>
+                            <label>Nama Divisi</label>
                             <input type="text" class="form-control @error('nama_divisi') is-invalid @enderror"
                                 id="myInput" wire:model="nama_divisi">
                             @error('nama_divisi')

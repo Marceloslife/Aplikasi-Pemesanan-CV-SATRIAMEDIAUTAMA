@@ -1,6 +1,6 @@
 <div>
     @include('livewire.divises.divisi-edit')
-    <table class="table text-center ">
+    <table class="table text-center">
         <thead class="table-dark">
             <tr>
                 <th>No</th>

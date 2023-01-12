@@ -156,7 +156,7 @@
                             src="images/LOGO SMU_T 2022.PNG" alt="" data-image-width="200"
                             data-image-height="100"></a>
                     <h3 class="u-text u-text-default u-text-4" data-animation-name="customAnimationIn"
-                        data-animation-duration="1000">SMU_TALENT</h3>
+                        data-animation-duration="1000">SMU TALENT</h3>
                 </div>
             </div>
         </div>
