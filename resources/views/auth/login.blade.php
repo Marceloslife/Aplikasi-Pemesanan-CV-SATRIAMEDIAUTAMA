@@ -55,6 +55,11 @@
                     {{ __('Log in') }}
                 </x-primary-button>
             </div>
+            <div>
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="http://127.0.0.1:8000/register">
+                    {{ __('Belum Punya Akun? Register') }}
+                </a>
+            </div>
         </form>
     </x-auth-card>
 </x-guest-layout>

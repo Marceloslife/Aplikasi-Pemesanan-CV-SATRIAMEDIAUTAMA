@@ -4,7 +4,7 @@
         <thead class="table-dark">
             <tr>
                 <th>No</th>
-                <th>Nama_divisi</th>
+                <th>Nama Divisi</th>
                 <th>action</th>
             </tr>
         </thead>
