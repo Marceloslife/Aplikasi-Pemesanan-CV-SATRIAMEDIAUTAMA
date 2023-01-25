@@ -104,6 +104,7 @@ class OrderController extends Controller
             // 'layanan_id' => $arrtostr
         ]);
         $email = 'm.irfan0205@gmail.com';
+        // $email = 'darkviolet2525@gmail.com';
         $orders->layanans()->attach($request->layanan);
          $orders->save();
          Mail::to($email)->send(new NewOrderMail($email));

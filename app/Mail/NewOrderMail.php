@@ -33,7 +33,7 @@ class NewOrderMail extends Mailable
     public function build(Request $request, Orders $orders)
     {
         $order = Orders::orderBy('id', 'desc')->first();
-        // dd($order);
+        // dd($order);z
         return $this->subject('Order Masuk')
                     ->view('mail.NewOrder')->with('order', $order);
     }

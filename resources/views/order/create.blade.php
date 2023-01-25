@@ -68,6 +68,9 @@
                                 <label for="no_hp_penyelenggara">No HP Penyelenggara</label>
                                 <input type="number" class="form-control" id="no_hp_penyelenggara"
                                     name="no_hp_penyelenggara" placeholder="Masukkan No HP Penyelenggara" required>
+                                {{-- <input type="tel" id="phone" name="no_hp_penyelenggara"
+                                    placeholder="+62 895-6204-89921" pattern="[+0-9]{3} [0-9]{3}-[0-9]{4}-[0-9]{5}"
+                                    required> --}}
                             </div>
                             <div class="form-group">
                                 <label for="email">Email Penyelenggara</label>

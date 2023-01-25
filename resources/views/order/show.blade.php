@@ -22,31 +22,31 @@
                                         dd($orders);
                                     @endphp --}}
                                     <td> Nama Event</td>
-                                    <td>{{ $orders->nama_event }}</td>
+                                    <td>: {{ $orders->nama_event }}</td>
                                 </tr>
                                 <tr>
                                     <td>Penyelenggara</td>
-                                    <td>{{ $orders->penyelenggara }}</td>
+                                    <td>: {{ $orders->penyelenggara }}</td>
                                 </tr>
                                 <tr>
                                     <td>Tanggal Dari</td>
-                                    <td>{{ $orders->tgl_dari }}</td>
+                                    <td>: {{ $orders->tgl_dari }}</td>
                                 </tr>
                                 <tr>
                                     <td>Tanggal Sampai</td>
-                                    <td>{{ $orders->tgl_sampai }}</td>
+                                    <td>: {{ $orders->tgl_sampai }}</td>
                                 </tr>
                                 <tr>
                                     <td>Lokasi Event</td>
-                                    <td>{{ $orders->lokasi_event }}</td>
+                                    <td>: {{ $orders->lokasi_event }}</td>
                                 </tr>
                                 <tr>
                                     <td>No Hp Penyelenggara</td>
-                                    <td>{{ $orders->no_hp_penyelenggara }}</td>
+                                    <td>: {{ $orders->no_hp_penyelenggara }}</td>
                                 </tr>
                                 <tr>
                                     <td>Email Penyelenggara</td>
-                                    <td>{{ $orders->email_penyelenggara }}</td>
+                                    <td>: {{ $orders->email_penyelenggara }}</td>
                                 </tr>
                                 <tr>
                                     <td>Layanan</td>
@@ -65,14 +65,16 @@
                                     @can('adminview', $orders)
                                         <td>Status</td>
                                         <td>
-                                            <a class="btn btn-sm" href="{{ url('approved/' . $orders->id) }}">Diterima</a>
-                                            <a class="btn btn-sm" href="{{ url('canceled/' . $orders->id) }}">Ditolak</a>
+                                            <a class="btn btn-sm btn-primary"
+                                                href="{{ url('approved/' . $orders->id) }}">Diterima</a>
+                                            <a class="btn btn-sm btn-danger"
+                                                href="{{ url('canceled/' . $orders->id) }}">Ditolak</a>
                                         </td>
                                     @endcan
                                 </tr>
                                 <tr>
-                                    <td>deskripsi</td>
-                                    <td>{{ $orders->deskripsi }}</td>
+                                    <td>Deskripsi</td>
+                                    <td>: {{ $orders->deskripsi }}</td>
                                 </tr>
                                 <tr>
                             </tbody>

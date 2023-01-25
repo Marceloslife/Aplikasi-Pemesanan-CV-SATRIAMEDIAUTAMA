@@ -5,6 +5,7 @@
 <p>Tanggal Sampai :{{ $order->tgl_sampai }}</p>
 <p>Lokasi Event :{{ $order->lokasi_event }}</p>
 <p>NO HP Penyelenggara :{{ $order->no_hp_penyelenggara }}</p>
+{{-- <a href="http://wa.me/{{ $order->no_hp_penyelenggara }}">Link WhatsApp Penyelenggara</a> --}}
 <p>Email Penyelenggara :{{ $order->email_penyelenggara }}</p>
 <p>Deskripsi :{{ $order->deskripsi }}</p>
 {{-- <p>{{ $order }}</p> --}}

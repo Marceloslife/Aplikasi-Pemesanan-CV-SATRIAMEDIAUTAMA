@@ -21,7 +21,7 @@ return new class extends Migration
             $table->dateTime('tgl_dari');
             $table->dateTime('tgl_sampai'); 
             $table->string('lokasi_event', 100);
-            $table->char('no_hp_penyelenggara', 13);
+            $table->char('no_hp_penyelenggara', 45);
             $table->string('email_penyelenggara', 45);
             $table->string('status', 45)->default('Permintaan Dikirim');
             $table->bigInteger('user_id');

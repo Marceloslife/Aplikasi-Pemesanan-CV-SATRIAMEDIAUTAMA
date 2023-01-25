@@ -36,10 +36,16 @@
                                     name="no_hp" placeholder="Masukkan no hp anggota">
                             </div>
                             <div class="form-group">
-                                <label for="jenis_kelamin">jenis_kelamin anggota</label>
-                                <input type="text" class="form-control" id="jenis_kelamin"
+                                <label for="jenis_kelamin">Jenis Kelamin Anggota</label>
+                                {{-- <input type="text" class="form-control" id="jenis_kelamin"
                                     value="{{ "$anggota->jenis_kelamin" }}" name="jenis_kelamin"
-                                    placeholder="Masukkan jenis_kelamin_anggota">
+                                    placeholder="Masukkan jenis_kelamin_anggota"> --}}
+                                <select class="form-control" name="jenis_kelamin" required>
+                                    {{-- <option value="">{{ "$anggota->jenis_kelamin" }}</option> --}}
+                                    {{-- <option>Pilih Jenis Kelamin</option> --}}
+                                    <option value="L">Laki Laki</option>
+                                    <option value="P">Perempuan</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="tanggal_lahir">tanggal_lahir anggota</label>
@@ -69,7 +75,7 @@
                                 <input type="file" name="foto">
                             </div>
                             <div class="form-group">
-                                <label>divisi</label>
+                                <label>Divisi</label>
                                 <select class="form-control" name="divisi_id">
                                     {{-- <option value="">Pilih divisi</option> --}}
                                     @foreach ($divises as $item)
@@ -78,7 +84,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>jabatan</label>
+                                <label>Jabatan</label>
                                 <select class="form-control" name="jabatan_id">
                                     {{-- <option value="">Pilih jabatan</option> --}}
                                     @foreach ($jabatans as $item)
@@ -87,18 +93,18 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="nik">nik anggota</label>
+                                <label for="nik">NIK Anggota</label>
                                 <input type="text" class="form-control" id="nik" value="{{ "$anggota->nik" }}"
                                     name="nik" placeholder="Masukkan nik_anggota">
                             </div>
                             <div class="form-group">
-                                <label for="no_karyawan">no_karyawan anggota</label>
+                                <label for="no_karyawan">No Karyawan Anggota</label>
                                 <input type="text" class="form-control" id="no_karyawan"
                                     value="{{ "$anggota->no_karyawan" }}" name="no_karyawan"
                                     placeholder="Masukkan no_karyawan_anggota">
                             </div>
                             <div class="form-group">
-                                <label for="tanggal_bergabung">tanggal_bergabung anggota</label>
+                                <label for="tanggal_bergabung">Tanggal Bergabung Anggota</label>
                                 <input type="text" class="form-control" id="tanggal_bergabung"
                                     value="{{ "$anggota->tanggal_bergabung" }}" name="tanggal_bergabung"
                                     placeholder="Masukkan tanggal_bergabung_anggota">
