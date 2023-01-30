@@ -18,7 +18,7 @@ class LandingPageController extends Controller
     }
 
     public function portofolio(){
-        $portofolio = Portofolio::orderBy('id', 'desc')->paginate(7);
+        $portofolio = Portofolio::orderBy('id', 'desc')->paginate(2);
         return view('event')->with('portofolio', $portofolio);
     }
 

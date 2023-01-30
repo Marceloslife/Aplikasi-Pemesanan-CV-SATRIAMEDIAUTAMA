@@ -77,6 +77,42 @@
                                 <input type="email" class="form-control" id="email" name="email_penyelenggara"
                                     placeholder="Enter email" required>
                             </div>
+                            <div class="form-group">
+                                <label for="email">List Harga Layanan</label>
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <th>Layanan</th>
+                                            <th>Range Harga</th>
+
+                                        </tr>
+                                        <tr>
+                                            <td>SHOW MANAGEMENT</td>
+                                            <td> -Rp.2.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>360 VIDEOBOOTH EXPERINCE</td>
+                                            <td> -Rp.2.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DEKORASI STAND & PRODUKSI</td>
+                                            <td> -Rp.2.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ARTIST AND TALENT MANAGEMENT</td>
+                                            <td> -Rp.2.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PHOTOGRAFI & VIDEOGRAFI</td>
+                                            <td> -Rp.2.000.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3D DESIGN</td>
+                                            <td> -Rp.2.000.000</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                             <div class="row">
                                 <label for="name" class="form-label">Layanan</label>
                                 <select id="layanan" name="layanan[]" multiple required>
