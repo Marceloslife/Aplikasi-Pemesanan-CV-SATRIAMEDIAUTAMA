@@ -80,7 +80,7 @@
                             <div class="form-group">
                                 <label for="email">List Harga Layanan</label>
                                 <div>
-                                    <table>
+                                    <table class="table col-md-6">
                                         <tr>
                                             <th>Layanan</th>
                                             <th>Range Harga</th>
@@ -88,29 +88,31 @@
                                         </tr>
                                         <tr>
                                             <td>SHOW MANAGEMENT</td>
-                                            <td> -Rp.2.000.000</td>
+                                            <td> Rp.10.000.000 - Rp.50.000.000 </td>
                                         </tr>
                                         <tr>
                                             <td>360 VIDEOBOOTH EXPERINCE</td>
-                                            <td> -Rp.2.000.000</td>
+                                            <td> Rp.1.500.000 - Rp.4.000.000</td>
                                         </tr>
                                         <tr>
                                             <td>DEKORASI STAND & PRODUKSI</td>
-                                            <td> -Rp.2.000.000</td>
+                                            <td> Rp.500.000 - Rp.1.500.000</td>
                                         </tr>
                                         <tr>
                                             <td>ARTIST AND TALENT MANAGEMENT</td>
-                                            <td> -Rp.2.000.000</td>
+                                            <td> Rp.2.000.000 - Rp.150.000.000</td>
                                         </tr>
                                         <tr>
                                             <td>PHOTOGRAFI & VIDEOGRAFI</td>
-                                            <td> -Rp.2.000.000</td>
+                                            <td> Rp.700.000 - Rp.5.000.000</td>
                                         </tr>
                                         <tr>
                                             <td>3D DESIGN</td>
-                                            <td> -Rp.2.000.000</td>
+                                            <td> Rp.3.000.000 - Rp.10.000.000</td>
                                         </tr>
                                     </table>
+                                    <label for="">*Semua harga diatas masih bisa nego dan belum termasuk
+                                        pajak.</label>
                                 </div>
                             </div>
                             <div class="row">

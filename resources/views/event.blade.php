@@ -1,16 +1,18 @@
 @extends('layouts.master')
 @section('content')
+    <center>
+        <h1 class="font-weight-light">Event</h1>
+    </center>
+
     @foreach ($portofolio as $item)
         <div>
             <div>
 
-                <link rel="stylesheet" href="event.css">
+                <link rel="stylesheet" src="event.css">
             </div>
             &nbsp;
 
-            <center>
-                <h1 class="font-weight-light">Event</h1>
-            </center>
+
             &nbsp;
             <center>
                 <div class="col-lg-4 text-center order-1 order-lg-2">
