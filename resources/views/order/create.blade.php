@@ -77,7 +77,7 @@
                                 <input type="email" class="form-control" id="email" name="email_penyelenggara"
                                     placeholder="Enter email" required>
                             </div>
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label for="email">List Harga Layanan</label>
                                 <div>
                                     <table class="table col-md-6">
@@ -114,7 +114,7 @@
                                     <label for="">*Semua harga diatas masih bisa nego dan belum termasuk
                                         pajak.</label>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="row">
                                 <label for="name" class="form-label">Layanan</label>
                                 <select id="layanan" name="layanan[]" multiple required>
